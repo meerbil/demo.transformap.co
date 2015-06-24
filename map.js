@@ -1147,6 +1147,13 @@ function loadPoi() {
 
         }
     }
+    if(tags['image']) {
+        r.append($('<tr>')
+                .attr('class','header')
+                .append("<td colspan=2 id='image'><img src='" + tags['image'] + "' style='maxwidth:260px;'/></td>" )//only one popup shall be open at a time for the id to be unique
+                );
+    }
+
 
 
     for (key in tags) {
