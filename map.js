@@ -814,6 +814,11 @@ function initMap(defaultlayer,base_maps,overlay_maps) {
   }
   // filters derived from taxonomy get added when taxonomy.json is loaded
 
+  // List of POIs
+  $('#sidebar').append('<div id="sidebox-list" class="box hidden"></div>');
+  $('#sidebox-list').append('<h2 onClick="toggleSideBox(\'sidebox-list\');">List of POIs</h2>');
+  $('#sidebox-list').append('<ul id="POIlist" class="boxcontent"></ul>');
+
   // Map Key
   $('#sidebar').append('<div id="sidebox-mapkey" class="box hidden"></div>');
   $('#sidebox-mapkey').append('<h2 onClick="toggleSideBox(\'sidebox-mapkey\');">Map Key</h2>');
@@ -1009,7 +1014,7 @@ function loadPoi() {
 
   function fillPopup(tags,type,id,lat,lon) {
 
-    var tags_to_ignore = [ "name" , "ref", "addr:street", "addr:housenumber", "addr:postcode", "addr:city", "addr:suburb", "addr:country","website","url","contact:website","contact:url","email","contact:email","phone","contact:phone","fax","contact:fax","created_by","area","layer","room","indoor","twitter","contact:twitter","link:twitter", "contact:google_plus", "google_plus", "link:google_plus", "contact:facebook","facebook","link:facebook","facebook:page","website:facebook","url:facebook","contact:youtube","youtube","link:youtube","wheelchair","wheelchair:description","wikipedia","wikidata" ];
+    var tags_to_ignore = [ "name" , "ref", "addr:street", "addr:housenumber", "addr:postcode", "addr:city", "addr:suburb", "addr:country","website","url","contact:website","contact:url","email","contact:email","phone","contact:phone","fax","contact:fax","created_by","area","layer","room","indoor","twitter","contact:twitter","link:twitter", "contact:google_plus", "google_plus", "link:google_plus", "contact:facebook","facebook","link:facebook","facebook:page","website:facebook","url:facebook","contact:youtube","youtube","link:youtube","wheelchair","wheelchair:description","wikipedia","wikidata","image" ];
 
     var r = $('<table>');
 
