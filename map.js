@@ -194,7 +194,7 @@ var overpass_ql_text,
     overpass_query_nodes,
     overpass_query_ways,
     overpass_query_rels,
-    object_type_keys = [ "amenity", "shop", "tourism", "craft", "garden:type", "leisure", "office", "man_made", "landuse", "club" ] ;
+    object_type_keys = [ "amenity", "shop", "tourism", "craft", "garden:type", "leisure", "office", "man_made", "landuse", "club", "farm_boxes" ] ;
 
 /*
  * sets global the vars above
@@ -1251,7 +1251,8 @@ function loadPoi() {
 
     var tags_to_ignore = [ "name" , "ref", "addr:street", "addr:housenumber", "addr:postcode", "addr:city", "addr:suburb", "addr:country","website","url","contact:website","contact:url","email","contact:email","phone","contact:phone","fax","contact:fax","created_by","area","layer","room","indoor","twitter","contact:twitter","link:twitter", "contact:google_plus", "google_plus", "link:google_plus", "contact:facebook","facebook","link:facebook","facebook:page","website:facebook","url:facebook","contact:youtube","youtube","link:youtube","wheelchair","wheelchair:description","wikipedia","wikidata","image" ];
 
-    var r = $('<table>');
+    var general_tab_content = $('<table>');
+    var osm_tab_content = $('<table>');
 
     var href = location.href.replace(/#.*$/,'').replace(/[&?]popup=(node|way|relation)[0-9]+/,'');
     var hasQuery = href.indexOf("?") + 1;
@@ -1259,16 +1260,19 @@ function loadPoi() {
 
     var popup_href =  href + appendix + '#' + map.getZoom() + '/' + lat + '/' + lon;
 
-    r.append($('<tr>')
+    general_tab_content.append($('<tr>')
             .attr('class','header')
             .append($('<td>').append('<a href="' + popup_href + '" title="Link to this POI on this map">Permalink</a>'))
-            .append($('<td>').append('<a href="http://editor.transformap.co/#background=Bing&id=' + type.substring(0,1) + id + '&map=19/' + lon + '/' + lat + '" title="Edit this object with iD for TransforMap" target=_blank>Edit</a>'))
-        );
-    r.append($('<tr>')
-            .attr('class','header')
-            .append($('<td>').append('<a href="https://www.openstreetmap.org/' + type + "/" + id + '" title="Link to ' + type + ' ' + id + ' on OpenStreetMap" target=_blank><img src="'+assethost+'assets/20px-Mf_' + type + '.svg.png" />' + type.substring(0,1) + id + '</a>'))
             .append($('<td>').append('<a href="http://map.project-osrm.org/?dest=' + lat + ',' + lon + '&destname=' + tags['name'] + '" target=_blank title="Route here with OSRM">Route Here</a>'))
         );
+
+    osm_tab_content.append($('<tr>')
+            .attr('class','header')
+            .append($('<td>').append('<a href="https://www.openstreetmap.org/' + type + "/" + id + '" title="Link to ' + type + ' ' + id + ' on OpenStreetMap" target=_blank><img src="'+assethost+'assets/20px-Mf_' + type + '.svg.png" />' + type.substring(0,1) + id + '</a>'))
+            .append($('<td>').append('<a href="http://editor.transformap.co/#background=Bing&id=' + type.substring(0,1) + id + '&map=19/' + lon + '/' + lat + '" title="Edit this object with iD for TransforMap" target=_blank>Edit</a>'))
+        );
+
+
     var wikipedia_link = "";
 
     function addSocialMediaLinks(tags) {
@@ -1322,7 +1326,7 @@ function loadPoi() {
     if(tags["addr:street"] || tags["addr:housenumber"] || tags["addr:postcode"] || tags["addr:city"] || tags["addr:suburb"] || tags["addr:country"]
             || tags["website"] || tags["url"] || tags["contact:website"] || tags["contact:url"] || tags["email"] || tags["contact:email"]
             || tags["phone"] || tags["contact:phone"] || tags["fax"] || tags["contact:fax"] || tags["wheelchair"] || social_media_links) {
-        r.append($('<tr>')
+        general_tab_content.append($('<tr>')
                 .attr('class','header')
                 .append($('<td>').append(
               (tags["addr:street"] ? tags["addr:street"] : "" ) +
@@ -1393,7 +1397,7 @@ function loadPoi() {
                     setTimeout(setImageInPopup,100); //needed here too if site called with popup open
             });
 
-            r.append($('<tr>')
+            general_tab_content.append($('<tr>')
                     .attr('class','header')
                     .append("<td colspan=2 id='wp-image'><img id='" +article_id + "' title='" + wp_articlename + "'/><a href='" + wikipedia_link +"'>© Wikipedia</a></td>" )//only one popup shall be open at a time for the id to be unique
                     );
@@ -1424,7 +1428,7 @@ function loadPoi() {
                 setTimeout(setImageInPopup,100); //needed here too if site called with popup open
             });
 
-            r.append($('<tr>')
+            general_tab_content.append($('<tr>')
                     .attr('class','header')
                     .append("<td colspan=2 id='wp-image'><img id='" + tags['image'] + "' title='" + tags['image'] + "'/><a href='https://commons.wikimedia.org/wiki/" + tags['image'] +"'>© Wikipedia</a></td>" )
                         // FIXME attribution/License must be set on return of call
@@ -1433,19 +1437,16 @@ function loadPoi() {
 
         }
         else if( ! (wp_articlename && tags['image'].match(/wiki(pedia|media)/)) ) {
-            r.append($('<tr>')
+            general_tab_content.append($('<tr>')
                     .attr('class','header')
                     .append("<td colspan=2 id='image'><img src='" + tags['image'] + "' style='width:276px;' /></td>" )//only one popup shall be open at a time for the id to be unique
                 );
         }
     }
 
-
-
+    //add all keys to OSM tab
     for (key in tags) {
       var value = tags[key];
-      if ( tags_to_ignore.indexOf(key) >= 0) 
-        continue;
 
       if ( key == 'website' || key == 'url' || key == 'contact:website' ||  key == 'contact:url') { 
         var teststr=/^http/; //http[s] is implicit here
@@ -1453,25 +1454,44 @@ function loadPoi() {
           value = "http://" + value;
           
         var htlink = '<a href="' + value + '">' + value + '</a>';
-        r.append($('<tr>').append($('<th>').text(key)).append($('<td>').append(htlink)));
+        osm_tab_content.append($('<tr>').append($('<th>').text(key)).append($('<td>').append(htlink)));
       } else if ( /^wikipedia/.test(key)) { 
         var lang = key.match(/^(?:wikipedia:)([a-z-]{2,7})$/) || ""; // if value starts with e.g. "de:ARTICLE", this works in WP anyway
         var begin = (! /^http/.test(value)) ? "https://" + ((lang) ? (lang[1] + ".") : "") + "wikipedia.org/wiki/" : ""; //http[s] is implicit here
 
         var htlink = $('<a>').attr('href', begin + value).text(decodeURIComponent(value));
-        r.append($('<tr>').addClass('tag').append($('<th>').text(key)).append($('<td>').append(htlink)));
+        osm_tab_content.append($('<tr>').addClass('tag').append($('<th>').text(key)).append($('<td>').append(htlink)));
       } else if ( key == 'wikidata' ) { 
         var begin = (! /^http/.test(value)) ? "https://www.wikidata.org/wiki/" : ""; //http[s] is implicit here
 
         var htlink = $('<a>').attr('href', begin + value).text(decodeURIComponent(value));
-        r.append($('<tr>').addClass('tag').append($('<th>').text(key)).append($('<td>').append(htlink)));
+        osm_tab_content.append($('<tr>').addClass('tag').append($('<th>').text(key)).append($('<td>').append(htlink)));
       } else if (key == 'contact:email' || key == 'email') {
         if ( ! /^mailto:/.test(value) )
           value = "mailto:" + value;
 
         var htlink = $('<a>').attr('href', value).text(value);
-        r.append($('<tr>').addClass('tag').append($('<th>').text(key)).append($('<td>').append(htlink)));
+        osm_tab_content.append($('<tr>').addClass('tag').append($('<th>').text(key)).append($('<td>').append(htlink)));
       } else {
+        var key_escaped = secHTML(key);
+        var value_escaped = secHTML(value);
+
+        var keytext = key_escaped.replace(/:/g,":<wbr />");
+        var valuetext = "<span>=&nbsp;</span>" + value_escaped.replace(/;/g,"; ");
+
+        osm_tab_content.append($('<tr>').addClass('tag')
+            .append($('<th>').append(keytext))
+            .append($('<td>').append(valuetext))
+            );
+      }
+    }
+
+    //add all unused keys to general tab
+    for (key in tags) {
+      var value = tags[key];
+      if ( tags_to_ignore.indexOf(key) >= 0) 
+        continue;
+
         var key_escaped = secHTML(key);
         var value_escaped = secHTML(value);
 
@@ -1499,18 +1519,17 @@ function loadPoi() {
         } 
         */
 
-        r.append($('<tr>').addClass('tag')
+        general_tab_content.append($('<tr>').addClass('tag')
             .append($('<th>').append(keytext))
             .append($('<td>').append(valuetext))
             );
-      }
 
     } // end for (key in tags)
 
-    var s = $('<div>');
-    s.append(r);
-    var retval = $('<div>').append(s);
+    var s = $('<div>'); 
 
+    var general_column = $('<div>'),
+        osm_column = $('<div>');
     var object_tags = getMainTags(tags),
         object_text = "unknown feature";
 
@@ -1522,7 +1541,7 @@ function loadPoi() {
         object_text = object_tags.join(", ");
     }
 
-    retval.prepend($('<h3>')
+    general_column.append($('<h3>')
             .attr("translated","untranslated")
             .attr("title", (object_text == "unknown feature") ? "This Object has no known OSM tag set" : object_text )
             .attr("sourcetext", object_text )
@@ -1531,7 +1550,48 @@ function loadPoi() {
             .append($("<span>")
                 .text("?")
                 .attr("title","Click here to show where this value comes from"))
-                    );
+        );
+    general_column.append(general_tab_content);
+    osm_column.append(osm_tab_content);
+
+    s.append($('<ul>')
+             .attr('class',"tabs")
+             .append($('<li>')
+                 .append($('<input>')
+                     .attr('type',"radio")
+                     .attr('checked','checked')
+                     .attr('name',"tabs")
+                     .attr('id',"tab_general")
+                     )
+                 .append($('<label>')
+                     .attr('for',"tab_general")
+                     .text('TransforMap')
+                     )
+                 .append(general_column
+                     .attr('id','tab-content_general')
+                     .attr('class','tab-content')
+                     )
+                 )
+             .append($('<li>')
+                 .append($('<input>')
+                     .attr('type',"radio")
+                     .attr('name',"tabs")
+                     .attr('id',"tab_osm")
+                     )
+                 .append($('<label>')
+                     .attr('for',"tab_osm")
+                     .text('OpenStreetMap')
+                     )
+                 .append(osm_column
+                     .attr('id','tab-content_osm')
+                     .attr('class','tab-content')
+                     )
+                 )
+             );
+
+ //   s.append(r);
+    var retval = $('<div>').append(s); //div is dummy element, only html inside is returned
+
     retval.prepend($('<h1>').text(tags["name"]));
     return retval.html();
   }

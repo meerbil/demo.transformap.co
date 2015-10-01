@@ -95,6 +95,52 @@ div.leaflet-popup-content { width: auto !important; }
     clear: both;
 }
 
+.leaflet-popup-content ul.tabs  { 
+    float: none;
+    list-style: none;
+    position: relative;
+    padding: 0;
+}
+.leaflet-popup-content ul.tabs li { float: left; }
+.leaflet-popup-content ul.tabs input[type=radio] { /* hide */
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+.leaflet-popup-content ul.tabs label {
+  display: block;
+  padding: 3px;
+  border:1px solid #FFB698;
+  border-bottom-width:0;
+  border-radius: 3px 3px 0 0;
+  margin-right:3px;
+  color: black;
+  font-weight: normal;
+  background: white;
+  cursor: pointer;
+}
+.leaflet-popup-content ul.tabs [id^=tab]:checked + label {
+    background: #FFB698;
+}
+.leaflet-popup-content ul.tabs [id^=tab] + label:hover {
+    background-color:rgba(255, 182, 152,0.5);
+}
+.leaflet-popup-content ul.tabs [id^=tab]:checked + label:hover {
+    background-color:rgba(255, 182, 152,0.9);
+}
+      
+.leaflet-popup-content ul.tabs [id^=tab]:checked ~ [id^=tab-content] {
+border-top:2px solid #FFB698;
+  display: block;
+    position:absolute;
+left:0;
+max-height:400px;
+overflow:auto;
+}
+.leaflet-popup-content ul.tabs .tab-content{ display:none; }
+
+/*.leaflet-popup-content div { max-height: 400px; overflow:auto; margin-right:-18px;padding-right:18px; width:285px; min-height:400px; }*/
+.leaflet-popup-content div { height: 400px; margin-right:-18px;padding-right:18px; width:285px; }
 
 .leaflet-popup-content div table,
 .leaflet-popup-content div table td { margin: 0; border-width:0px; padding:0; border-spacing:0;}
@@ -119,8 +165,6 @@ div.leaflet-popup-content { width: auto !important; }
 .leaflet-popup-content div table tr.header td img.wheelchair.no { border-radius:3px; border:1px solid black; background: #E95A61;}
 .leaflet-popup-content div table tr.header td img.wheelchair.limited { border-radius:3px; border:1px solid black; background: yellow;}
 .leaflet-popup-content div table tr.header td img.wheelchair.yes { border-radius:3px; border:1px solid black; background: #8DD060;}
-
-.leaflet-popup-content div { max-height: 400px; overflow:auto; margin-right:-18px;padding-right:18px; }
 
 .leaflet-popup-content div table tr:first-child + tr img { height:16px; width:16px; margin:0 5px -4px 0;}
 .leaflet-popup-content div table a[target="_blank"]:after {content:url(assets/external-link-ltr-icon.png); text-decoration:none; margin-left:4px; }
