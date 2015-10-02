@@ -1261,13 +1261,13 @@ function loadPoi() {
     var popup_href =  href + appendix + '#' + map.getZoom() + '/' + lat + '/' + lon;
 
     general_tab_content.append($('<tr>')
-            .attr('class','header')
+            .attr('class','header overline ')
             .append($('<td>').append('<a href="' + popup_href + '" title="Link to this POI on this map">Permalink</a>'))
             .append($('<td>').append('<a href="http://map.project-osrm.org/?dest=' + lat + ',' + lon + '&destname=' + tags['name'] + '" target=_blank title="Route here with OSRM">Route Here</a>'))
         );
 
     osm_tab_content.append($('<tr>')
-            .attr('class','header')
+            .attr('class','header underline')
             .append($('<td>').append('<a href="https://www.openstreetmap.org/' + type + "/" + id + '" title="Link to ' + type + ' ' + id + ' on OpenStreetMap" target=_blank><img src="'+assethost+'assets/20px-Mf_' + type + '.svg.png" />' + type.substring(0,1) + id + '</a>'))
             .append($('<td>').append('<a href="http://editor.transformap.co/#background=Bing&id=' + type.substring(0,1) + id + '&map=19/' + lon + '/' + lat + '" title="Edit this object with iD for TransforMap" target=_blank>Edit</a>'))
         );
@@ -1327,7 +1327,7 @@ function loadPoi() {
             || tags["website"] || tags["url"] || tags["contact:website"] || tags["contact:url"] || tags["email"] || tags["contact:email"]
             || tags["phone"] || tags["contact:phone"] || tags["fax"] || tags["contact:fax"] || tags["wheelchair"] || social_media_links) {
         general_tab_content.append($('<tr>')
-                .attr('class','header')
+                .attr('class','header overline underline')
                 .append($('<td>').append(
               (tags["addr:street"] ? tags["addr:street"] : "" ) +
               (tags["addr:housenumber"] ? ("&nbsp;" + tags["addr:housenumber"]) : "" ) + 
@@ -1398,7 +1398,7 @@ function loadPoi() {
             });
 
             general_tab_content.append($('<tr>')
-                    .attr('class','header')
+                    .attr('class','header underline')
                     .append("<td colspan=2 id='wp-image'><img id='" +article_id + "' title='" + wp_articlename + "'/><a href='" + wikipedia_link +"'>© Wikipedia</a></td>" )//only one popup shall be open at a time for the id to be unique
                     );
 
@@ -1429,7 +1429,7 @@ function loadPoi() {
             });
 
             general_tab_content.append($('<tr>')
-                    .attr('class','header')
+                    .attr('class','header underline')
                     .append("<td colspan=2 id='wp-image'><img id='" + tags['image'] + "' title='" + tags['image'] + "'/><a href='https://commons.wikimedia.org/wiki/" + tags['image'] +"'>© Wikipedia</a></td>" )
                         // FIXME attribution/License must be set on return of call
                     );
@@ -1467,10 +1467,9 @@ function loadPoi() {
         var htlink = $('<a>').attr('href', begin + value).text(decodeURIComponent(value));
         osm_tab_content.append($('<tr>').addClass('tag').append($('<th>').text(key)).append($('<td>').append(htlink)));
       } else if (key == 'contact:email' || key == 'email') {
-        if ( ! /^mailto:/.test(value) )
-          value = "mailto:" + value;
+        var link = ( ! /^mailto:/.test(value) ) ? "mailto:" + value : value;
 
-        var htlink = $('<a>').attr('href', value).text(value);
+        var htlink = $('<a>').attr('href', link).text(value);
         osm_tab_content.append($('<tr>').addClass('tag').append($('<th>').text(key)).append($('<td>').append(htlink)));
       } else {
         var key_escaped = secHTML(key);
@@ -1554,42 +1553,42 @@ function loadPoi() {
     general_column.append(general_tab_content);
     osm_column.append(osm_tab_content);
 
-    s.append($('<ul>')
-             .attr('class',"tabs")
-             .append($('<li>')
-                 .append($('<input>')
-                     .attr('type',"radio")
-                     .attr('checked','checked')
-                     .attr('name',"tabs")
-                     .attr('id',"tab_general")
-                     )
-                 .append($('<label>')
-                     .attr('for',"tab_general")
-                     .text('TransforMap')
-                     )
-                 .append(general_column
-                     .attr('id','tab-content_general')
-                     .attr('class','tab-content')
-                     )
+    s.append($('<input>')
+         .attr('type',"radio")
+         .attr('name',"tabs")
+         .attr('checked','checked')
+         .attr('id',"tab_general")
+         )
+     .append($('<label>')
+         .attr('for',"tab_general")
+         .attr('class',"tabs")
+         .text('TransforMap')
+         )
+     .append($('<input>')
+         .attr('type',"radio")
+         .attr('name',"tabs")
+         .attr('id',"tab_osm")
+         )
+     .append($('<label>')
+         .attr('for',"tab_osm")
+         .attr('class',"tabs")
+         .text('OpenStreetMap')
+         )
+        
+    s.append($('<div>')
+            .attr('class','tab_line'));
+    s.append($('<div>')
+             .attr('class',"tab-content-holder")
+             .append(general_column
+                 .attr('id','tab-content_general')
+                 .attr('class','tab-content')
                  )
-             .append($('<li>')
-                 .append($('<input>')
-                     .attr('type',"radio")
-                     .attr('name',"tabs")
-                     .attr('id',"tab_osm")
-                     )
-                 .append($('<label>')
-                     .attr('for',"tab_osm")
-                     .text('OpenStreetMap')
-                     )
-                 .append(osm_column
-                     .attr('id','tab-content_osm')
-                     .attr('class','tab-content')
-                     )
+             .append(osm_column
+                 .attr('id','tab-content_osm')
+                 .attr('class','tab-content')
                  )
-             );
+            );
 
- //   s.append(r);
     var retval = $('<div>').append(s); //div is dummy element, only html inside is returned
 
     retval.prepend($('<h1>').text(tags["name"]));

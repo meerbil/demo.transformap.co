@@ -95,19 +95,13 @@ div.leaflet-popup-content { width: auto !important; }
     clear: both;
 }
 
-.leaflet-popup-content ul.tabs  { 
-    float: none;
-    list-style: none;
-    position: relative;
-    padding: 0;
-}
-.leaflet-popup-content ul.tabs li { float: left; }
-.leaflet-popup-content ul.tabs input[type=radio] { /* hide */
+.leaflet-popup-content input[type=radio][name=tabs] { /* hide */
   position: absolute;
   top: -9999px;
   left: -9999px;
 }
-.leaflet-popup-content ul.tabs label {
+.leaflet-popup-content label.tabs  {
+    float: left;
   display: block;
   padding: 3px;
   border:1px solid #FFB698;
@@ -119,28 +113,35 @@ div.leaflet-popup-content { width: auto !important; }
   background: white;
   cursor: pointer;
 }
-.leaflet-popup-content ul.tabs [id^=tab]:checked + label {
+
+/* - ah detecting of current active tab will not work this way...
+    maybe misuse input as "background color", if absolute positioned? */
+.leaflet-popup-content input[id^=tab]:checked + label.tabs {
     background: #FFB698;
 }
-.leaflet-popup-content ul.tabs [id^=tab] + label:hover {
+.leaflet-popup-content input[id^=tab] + label.tabs:hover {
     background-color:rgba(255, 182, 152,0.5);
 }
-.leaflet-popup-content ul.tabs [id^=tab]:checked + label:hover {
+.leaflet-popup-content input[id^=tab]:checked + label.tabs:hover {
     background-color:rgba(255, 182, 152,0.9);
-}
+} 
       
-.leaflet-popup-content ul.tabs [id^=tab]:checked ~ [id^=tab-content] {
-border-top:2px solid #FFB698;
-  display: block;
-    position:absolute;
-left:0;
-max-height:400px;
-overflow:auto;
+.leaflet-popup-content .tab-content-holder .tab-content { display:none; 
+    max-height:380px;
+    overflow:auto;
 }
-.leaflet-popup-content ul.tabs .tab-content{ display:none; }
+.leaflet-popup-content input[id=tab_osm]:checked ~ .tab-content-holder [id^=tab-content_osm], 
+.leaflet-popup-content input[id=tab_general]:checked ~ .tab-content-holder [id^=tab-content_general] {
+  display: block;
+}
+.leaflet-popup-content div.tab_line {
+    clear:both;
+    width:100% -70px;
+    border-top:2px solid #FFB698;
+}
 
 /*.leaflet-popup-content div { max-height: 400px; overflow:auto; margin-right:-18px;padding-right:18px; width:285px; min-height:400px; }*/
-.leaflet-popup-content div { height: 400px; margin-right:-18px;padding-right:18px; width:285px; }
+.leaflet-popup-content div { max-height: 400px; margin-right:-18px;padding-right:18px; }
 
 .leaflet-popup-content div table,
 .leaflet-popup-content div table td { margin: 0; border-width:0px; padding:0; border-spacing:0;}
@@ -153,9 +154,10 @@ overflow:auto;
 .leaflet-popup-content div table tr.tag:hover,
 .leaflet-popup-content h3:hover {background-color:#DDDDDD}
 
-/* header spacing line */
-.leaflet-popup-content div table tr.header td { vertical-align:top; padding:5px 0; border-bottom:2px solid #FFB698;} 
-.leaflet-popup-content div table tr.header:first-child td { border-bottom:0; padding:5px 0 0 0; border-top:2px solid #FFB698;}
+.leaflet-popup-content div table tr.header td { vertical-align:top; padding:5px 0; } 
+/* header spacing lines */
+.leaflet-popup-content div table tr.header.overline td {border-top:2px solid #FFB698;}
+.leaflet-popup-content div table tr.header.underline td {border-bottom:2px solid #FFB698;}
 
 /* edit and contact fields */
 .leaflet-popup-content div table tr.header td + td { text-align:right; }
