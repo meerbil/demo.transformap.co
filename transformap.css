@@ -131,12 +131,15 @@ div.leaflet-popup-content { width: auto !important; }
     overflow:auto;
 }
 .leaflet-popup-content input[id=tab_osm]:checked ~ .tab-content-holder [id^=tab-content_osm], 
+.leaflet-popup-content input[id=tab_media]:checked ~ .tab-content-holder [id^=tab-content_media],
 .leaflet-popup-content input[id=tab_general]:checked ~ .tab-content-holder [id^=tab-content_general] {
   display: block;
 }
 .leaflet-popup-content div.tab_line {
     clear:both;
-    width:100% -70px;
+    width:100%;
+    min-width:170px; /* minimal width of all tab texts, so it doesn't line break */
+    margin-right:70px;
     border-top:2px solid #FFB698;
 }
 

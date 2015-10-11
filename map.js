@@ -1253,6 +1253,7 @@ function loadPoi() {
 
     var general_tab_content = $('<table>');
     var osm_tab_content = $('<table>');
+    var media_tab_content = $('<table>');
 
     var href = location.href.replace(/#.*$/,'').replace(/[&?]popup=(node|way|relation)[0-9]+/,'');
     var hasQuery = href.indexOf("?") + 1;
@@ -1436,6 +1437,10 @@ function loadPoi() {
                     .attr('class','header underline')
                     .append("<td colspan=2 id='wp-image'><img id='" +article_id + "' title='" + wp_articlename + "'/><a href='" + wikipedia_link +"'>© Wikipedia</a></td>" )//only one popup shall be open at a time for the id to be unique
                     );
+            media_tab_content.append($('<tr>')
+                    .attr('class','header underline')
+                    .append("<td>Wikipedia:</td><td><a href='" + wikipedia_link +"'>"+wp_articlename+"</a></td>" )//only one popup shall be open at a time for the id to be unique
+                    );
 
         }
     }
@@ -1476,7 +1481,16 @@ function loadPoi() {
                     .attr('class','header')
                     .append("<td colspan=2 id='image'><img src='" + tags['image'] + "' style='width:276px;' /></td>" )//only one popup shall be open at a time for the id to be unique
                 );
+            media_tab_content.append($('<tr>')
+                    .attr('class','header')
+                    .append("<td colspan=2 id='image-media'><img src='" + tags['image'] + "' style='width:276px;' /></td>" )//only one popup shall be open at a time for the id to be unique
+                );
         }
+    } else if (!wp_articlename) {
+        media_tab_content.append($('<tr>')
+                .attr('class','header')
+                .append("<td colspan=2>There is no image yet for this POI. You can add one by adding its url to the 'image'-tag to OSM!</td>" )//only one popup shall be open at a time for the id to be unique
+            );
     }
 
     //add all keys to OSM tab
@@ -1563,10 +1577,12 @@ function loadPoi() {
     var s = $('<div>'); 
 
     var general_column = $('<div>'),
-        osm_column = $('<div>');
+        osm_column = $('<div>'),
+        media_column = $('<div>');
 
     general_column.append(general_tab_content);
     osm_column.append(osm_tab_content);
+    media_column.append(media_tab_content);
 
     s.append($('<input>')
          .attr('type',"radio")
@@ -1589,6 +1605,16 @@ function loadPoi() {
          .attr('class',"tabs")
          .text('OpenStreetMap')
          )
+     .append($('<input>')
+         .attr('type',"radio")
+         .attr('name',"tabs")
+         .attr('id',"tab_media")
+         )
+     .append($('<label>')
+         .attr('for',"tab_media")
+         .attr('class',"tabs")
+         .text('Media')
+         )
         
     s.append($('<div>')
             .attr('class','tab_line'));
@@ -1600,6 +1626,10 @@ function loadPoi() {
                  )
              .append(osm_column
                  .attr('id','tab-content_osm')
+                 .attr('class','tab-content')
+                 )
+             .append(media_column
+                 .attr('id','tab-content_media')
                  .attr('class','tab-content')
                  )
             );
