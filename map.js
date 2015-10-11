@@ -1261,6 +1261,41 @@ function loadPoi() {
     var popup_href =  href + appendix + '#' + map.getZoom() + '/' + lat + '/' + lon;
 
     general_tab_content.append($('<tr>')
+            .append($('<td>')
+                .attr('colspan','2')
+                .append($('<h1>')
+                    .text(tags["name"])
+                )
+            )
+        );
+
+    var object_tags = getMainTags(tags),
+        object_text = "unknown feature";
+
+    if(object_tags.length) {
+        object_tags.forEach(function (currentValue) {
+            fetchTranslationsFromWikiData(currentValue);
+        });
+
+        object_text = object_tags.join(", ");
+    }
+
+    general_tab_content.append($('<tr>')
+            .append($('<td>')
+                .attr('colspan','2')
+                .append($('<h3>')
+                    .attr("translated","untranslated")
+                    .attr("title", (object_text == "unknown feature") ? "This Object has no known OSM tag set" : object_text )
+                    .attr("sourcetext", object_text )
+                    .append($("<span>")
+                        .text(object_text))
+                    .append($("<span>")
+                        .text("?")
+                        .attr("title","Click here to show where this value comes from")) //TODO add popup
+                )
+            )
+        );
+    general_tab_content.append($('<tr>')
             .attr('class','header overline ')
             .append($('<td>').append('<a href="' + popup_href + '" title="Link to this POI on this map">Permalink</a>'))
             .append($('<td>').append('<a href="http://map.project-osrm.org/?dest=' + lat + ',' + lon + '&destname=' + tags['name'] + '" target=_blank title="Route here with OSRM">Route Here</a>'))
@@ -1529,27 +1564,7 @@ function loadPoi() {
 
     var general_column = $('<div>'),
         osm_column = $('<div>');
-    var object_tags = getMainTags(tags),
-        object_text = "unknown feature";
 
-    if(object_tags.length) {
-        object_tags.forEach(function (currentValue) {
-            fetchTranslationsFromWikiData(currentValue);
-        });
-
-        object_text = object_tags.join(", ");
-    }
-
-    general_column.append($('<h3>')
-            .attr("translated","untranslated")
-            .attr("title", (object_text == "unknown feature") ? "This Object has no known OSM tag set" : object_text )
-            .attr("sourcetext", object_text )
-            .append($("<span>")
-                .text(object_text))
-            .append($("<span>")
-                .text("?")
-                .attr("title","Click here to show where this value comes from"))
-        );
     general_column.append(general_tab_content);
     osm_column.append(osm_tab_content);
 
@@ -1591,7 +1606,6 @@ function loadPoi() {
 
     var retval = $('<div>').append(s); //div is dummy element, only html inside is returned
 
-    retval.prepend($('<h1>').text(tags["name"]));
     return retval.html();
   }
 
