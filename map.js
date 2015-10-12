@@ -1249,7 +1249,7 @@ function loadPoi() {
 
   function fillPopup(tags,type,id,lat,lon) {
 
-    var tags_to_ignore = [ "name" , "ref", "addr:street", "addr:housenumber", "addr:postcode", "addr:city", "addr:suburb", "addr:country","website","url","contact:website","contact:url","email","contact:email","phone","contact:phone","fax","contact:fax","created_by","area","layer","room","indoor","twitter","contact:twitter","link:twitter", "contact:google_plus", "google_plus", "link:google_plus", "contact:facebook","facebook","link:facebook","facebook:page","website:facebook","url:facebook","contact:youtube","youtube","link:youtube","wheelchair","wheelchair:description","wikipedia","wikidata","image","building","fixme","note","source" ].concat(object_type_keys);
+    var tags_to_ignore = [ "name" , "ref", "description", "description:" + language[0],"addr:street", "addr:housenumber", "addr:postcode", "addr:city", "addr:suburb", "addr:country","website","url","contact:website","contact:url","email","contact:email","phone","contact:phone","fax","contact:fax","created_by","area","layer","room","indoor","twitter","contact:twitter","link:twitter", "contact:google_plus", "google_plus", "link:google_plus", "contact:facebook","facebook","link:facebook","facebook:page","website:facebook","url:facebook","contact:youtube","youtube","link:youtube","wheelchair","wheelchair:description","wikipedia","wikidata","image","building","fixme","note","source" ].concat(object_type_keys);
 
     var general_tab_content = $('<table>');
     var osm_tab_content = $('<table>');
@@ -1296,6 +1296,22 @@ function loadPoi() {
                 )
             )
         );
+    if(tags["description:" + language[0] ]) {
+        general_tab_content.append($('<tr>')
+                .append($('<td>')
+                    .attr('colspan','2')
+                    .text("description (" + language[0] + "): " + tags["description:" + language[0] ])
+                    )
+                );
+    } else if(tags["description"]) {
+        general_tab_content.append($('<tr>')
+                .append($('<td>')
+                    .attr('colspan','2')
+                    .text("description: " + tags["description"])
+                    )
+                );
+    }
+
     general_tab_content.append($('<tr>')
             .attr('class','header overline ')
             .append($('<td>').append('<a href="' + popup_href + '" title="Link to this POI on this map">Permalink</a>'))
