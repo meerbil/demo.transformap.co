@@ -194,7 +194,7 @@ var overpass_ql_text,
     overpass_query_nodes,
     overpass_query_ways,
     overpass_query_rels,
-    object_type_keys = [ "amenity", "shop", "tourism", "craft", "garden:type", "leisure", "office", "man_made", "landuse", "club", "farm_boxes" ] ;
+    object_type_keys = [ "amenity", "shop", "tourism", "craft", "garden:type", "leisure", "office", "man_made", "landuse", "club", "farm_boxes", "barrier", "footway" ] ;
 
 /*
  * sets global the vars above
@@ -533,11 +533,13 @@ function chooseIconSrc(tags,iconsize) {
     if(!icon_tag) {
       icon_url = assethost+"assets/transformap/pngs/" + overpass_config.icon_folder + "/" + iconsize + "/unknown.png";
     } else {
+      var tag_value = tags[icon_tag];
+      tag_value = tag_value.replace(/[%]/,"_");
 
-      if (tags[icon_tag].indexOf(";") >= 0) // more than one item, take generic icon
+      if (tag_value.indexOf(";") >= 0) // more than one item, take generic icon
         icon_url = assethost+"assets/transformap/pngs/" + overpass_config.icon_folder + "/" + iconsize + "/generic.png";
       else
-        icon_url = assethost+"assets/transformap/pngs/" + overpass_config.icon_folder + "/" + iconsize + "/" + icon_tag + "=" + tags[icon_tag] + ".png";
+        icon_url = assethost+"assets/transformap/pngs/" + overpass_config.icon_folder + "/" + iconsize + "/" + icon_tag + "=" + tag_value + ".png";
     }
     return icon_url;
 }
@@ -1249,7 +1251,7 @@ function loadPoi() {
 
   function fillPopup(tags,type,id,lat,lon) {
 
-    var tags_to_ignore = [ "name" , "ref", "addr:street", "addr:housenumber", "addr:postcode", "addr:city", "addr:suburb", "addr:country","website","url","contact:website","contact:url","email","contact:email","phone","contact:phone","fax","contact:fax","created_by","area","layer","room","indoor","twitter","contact:twitter","link:twitter", "contact:google_plus", "google_plus", "link:google_plus", "contact:facebook","facebook","link:facebook","facebook:page","website:facebook","url:facebook","contact:youtube","youtube","link:youtube","wheelchair","wheelchair:description","wikipedia","wikidata","image" ];
+    var tags_to_ignore = [ "name" , "ref", "addr:street", "addr:housenumber", "addr:postcode", "addr:city", "addr:suburb", "addr:country","website","url","contact:website","contact:url","email","contact:email","phone","contact:phone","fax","contact:fax","created_by","area","layer","room","indoor","twitter","contact:twitter","link:twitter", "contact:google_plus", "google_plus", "link:google_plus", "contact:facebook","facebook","link:facebook","facebook:page","website:facebook","url:facebook","contact:youtube","youtube","link:youtube","wheelchair","wheelchair:description","wikipedia","wikidata","image","source","lit","segregated","motor_vehicle" ];
 
     var r = $('<table>');
 
@@ -1317,7 +1319,7 @@ function loadPoi() {
         return string;
     }
 
-    var social_media_links = addSocialMediaLinks(tags);
+    var social_media_links = "";//addSocialMediaLinks(tags);
 
     if(tags["addr:street"] || tags["addr:housenumber"] || tags["addr:postcode"] || tags["addr:city"] || tags["addr:suburb"] || tags["addr:country"]
             || tags["website"] || tags["url"] || tags["contact:website"] || tags["contact:url"] || tags["email"] || tags["contact:email"]
@@ -1427,7 +1429,7 @@ function loadPoi() {
 
             r.append($('<tr>')
                     .attr('class','header')
-                    .append("<td colspan=2 id='wp-image'><img id='" + imagename + "' title='" + imagename + "'/><a href='https://commons.wikimedia.org/wiki/" + imagename + "'>© Wikipedia</a></td>" )
+                    .append("<td colspan=2 id='wp-image'><img id='" + imagename + "' title='" + imagename + "'/><a href='https://commons.wikimedia.org/wiki/" + imagename + "'>© Wikimedia Commons</a></td>" )
                         // FIXME attribution/License must be set on return of call
                     );
 
