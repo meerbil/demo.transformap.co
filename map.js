@@ -1251,7 +1251,7 @@ function loadPoi() {
 
   function fillPopup(tags,type,id,lat,lon) {
 
-    var tags_to_ignore = [ "name" , "ref", "addr:street", "addr:housenumber", "addr:postcode", "addr:city", "addr:suburb", "addr:country","website","url","contact:website","contact:url","email","contact:email","phone","contact:phone","fax","contact:fax","created_by","area","layer","room","indoor","twitter","contact:twitter","link:twitter", "contact:google_plus", "google_plus", "link:google_plus", "contact:facebook","facebook","link:facebook","facebook:page","website:facebook","url:facebook","contact:youtube","youtube","link:youtube","wheelchair","wheelchair:description","wikipedia","wikidata","image","source","lit","segregated","motor_vehicle" ];
+    var tags_to_ignore = [ "name" , "ref", "addr:street", "addr:housenumber", "addr:postcode", "addr:city", "addr:suburb", "addr:country","website","url","contact:website","contact:url","email","contact:email","phone","contact:phone","fax","contact:fax","created_by","area","layer","room","indoor","twitter","contact:twitter","link:twitter", "contact:google_plus", "google_plus", "link:google_plus", "contact:facebook","facebook","link:facebook","facebook:page","website:facebook","url:facebook","contact:youtube","youtube","link:youtube","wheelchair","wikipedia","wikidata","image","source","lit","segregated","motor_vehicle" ];
 
     var r = $('<table>');
 
@@ -1937,14 +1937,14 @@ function loadPoi() {
       timeOutOverpassCall("way", this_pid);
   },1000*overpass_config.timeout);
 
-  changeLoadingIndicator("loading_relation", +1);
-  this_pid = pids.relation.counter++;
-  pids.relation.active[this_pid] = { state : "running", bounds : bounds_rounded } ;
-  console.log("loadPOI: before JSON call pid rel"+this_pid+": " + rel_url);
-  $.getJSON(rel_url, handleRelations);
-  setTimeout(function () {
-      timeOutOverpassCall("relation", this_pid);
-  },1000*overpass_config.timeout);
+//  changeLoadingIndicator("loading_relation", +1);
+//  this_pid = pids.relation.counter++;
+//  pids.relation.active[this_pid] = { state : "running", bounds : bounds_rounded } ;
+//  console.log("loadPOI: before JSON call pid rel"+this_pid+": " + rel_url);
+//  $.getJSON(rel_url, handleRelations);
+//  setTimeout(function () {
+//      timeOutOverpassCall("relation", this_pid);
+//  },1000*overpass_config.timeout);
 }
 
 function timeOutOverpassCall(osm_type,pid) {
