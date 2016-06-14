@@ -163,6 +163,11 @@ div.leaflet-popup-content { width: auto !important; }
   border-bottom: black 2px solid;
 }
 
+.leaflet-clickable:hover {
+    stroke-width:10;
+    color:"#6374A6";
+}
+
 #notificationbar {
   position: absolute;
   top: 60px;

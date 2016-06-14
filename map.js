@@ -283,6 +283,13 @@ function initMap(defaultlayer,base_maps,overlay_maps,lat,lon,zoom) {
   if(!overlay_maps)
     overlay_maps = default_overlay;
 
+  geometry_layer = new L.GeoJSON(null, {
+    onEachFeature: function (e, layer) {
+      if (e.properties && e.properties.name) layer.bindPopup(e.properties.name);
+      if (e.properties && e.properties.style) layer.setStyle(e.properties.style);
+    }
+  });
+
   map = new L.Map('map', {
     center: center,
     zoom: zoom ? zoom : 3,
@@ -304,6 +311,7 @@ function initMap(defaultlayer,base_maps,overlay_maps,lat,lon,zoom) {
   }
 
   map.addLayer(markers);
+  map.addLayer(geometry_layer);
 
   var ctrl = new L.Control.Layers(base_maps,overlay_maps)
   map.addControl(ctrl);
@@ -1602,16 +1610,92 @@ function loadPoi() {
     return bindPopupOnData(data);
   }
   function wayFunction(data) {
+
     //calculate centre of polygon
 
-    var centroid = $.geo.centroid(data.geometry);
-    //var style = {};
+    var centroid;
+
+    //determine if closed way: first an last point are the same:
+    var last_node_nr = data.geometry.coordinates.length - 1;
+    var lineString = data.geometry.coordinates
+
+    if(lineString[0][0] == lineString[last_node_nr][0] && lineString[0][1] == lineString[last_node_nr][1])
+      centroid = $.geo.centroid(data.geometry); //only works correct on closed ways
+
+    else { //calculate a point in the middle of the linestring
+      var overall_length = 0;
+
+      /** thx @tyrasd
+       *
+       * Calculate the approximate distance between two coordinates (lat/lon)
+       *
+       * © Chris Veness, MIT-licensed,
+       * http://www.movable-type.co.uk/scripts/latlong.html#equirectangular
+       */
+      function distance(λ1,φ1,λ2,φ2) {
+          var R = 6371000;
+          Δλ = (λ2 - λ1) * Math.PI / 180;
+          φ1 = φ1 * Math.PI / 180;
+          φ2 = φ2 * Math.PI / 180;
+          var x = Δλ * Math.cos((φ1+φ2)/2);
+          var y = (φ2-φ1);
+          var d = Math.sqrt(x*x + y*y);
+          return R * d;
+      };
+
+      for(var pointcointer=1; pointcointer <= last_node_nr; pointcointer++) {
+        overall_length += distance(lineString[pointcointer-1][0],lineString[pointcointer-1][1],
+                                       lineString[pointcointer][0],lineString[pointcointer][1]);
+      }
+      // go from the beginning, sum up lengths of segments until > overall/2
+      // calculate percentage where the point should be, set it.
+      var summed_length = 0;
+      var target_length = overall_length/2;
+      var middle_segment_start_nr = -1;
+      var segment_length = 0;
+      var distance_factor_from_middle_segment_start_nr = 0;
+
+      for(var segment_nr = 0; segment_nr <= last_node_nr; segment_nr++) {
+        segment_length = distance(lineString[segment_nr][0],lineString[segment_nr][1],
+            lineString[segment_nr + 1][0],lineString[segment_nr + 1][1]);
+
+        summed_length += segment_length;
+
+        if(summed_length >= target_length) {
+          middle_segment_start_nr = segment_nr;
+          var distance_from_middle_segment_start_nr = segment_length - (summed_length - target_length);
+          distance_factor_from_middle_segment_start_nr = distance_from_middle_segment_start_nr / segment_length;
+          break;
+        }
+      }
+      centroid = $.geo.centroid(data.geometry); //to create object
+      centroid.coordinates[0] = lineString[middle_segment_start_nr][0] + 
+        distance_factor_from_middle_segment_start_nr * (lineString[middle_segment_start_nr + 1][0] - lineString[middle_segment_start_nr][0]);
+      centroid.coordinates[1] = lineString[middle_segment_start_nr][1] + 
+        distance_factor_from_middle_segment_start_nr * (lineString[middle_segment_start_nr + 1][1] - lineString[middle_segment_start_nr][1]);
+    }
+     
     centroid.tags = data.tags;
     centroid.id = data.id;
     centroid.type = data.type;
     centroid.lon = centroid.coordinates[0];
     centroid.lat = centroid.coordinates[1];
-    return bindPopupOnData(centroid);
+
+    var style = {
+      color: "#FF0000",
+      fill:false, //set only true on areas
+      fillColor:'blue',
+      fillOpacity:0.5,
+      weight: 6
+    };
+
+    geometry_layer.addData({ // bind on geometry
+      type: 'Feature',
+      geometry: data.geometry,
+      properties: {name: fillPopup(data.tags,data.type,data.id,centroid.lat,centroid.lon), style: style}
+    });
+
+    return bindPopupOnData(centroid); //bind on centroid
   }
   function relationFunction(data) {
     // calculate mean coordinates as center
