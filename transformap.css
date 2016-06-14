@@ -137,6 +137,14 @@ div.leaflet-popup-content { width: auto !important; }
 }
 
 
+.leaflet-marker-icon {
+  background:white;
+  border-radius:5px;
+}
+.leaflet-marker-icon.k-image, #mapkey .k-image {
+  background:#0054ff;
+  border-radius:5px;
+}
 .leaflet-marker-icon.k-organic.v-only, #mapkey .k-organic.v-only {
   background:#00B100;
   border-radius:5px;
@@ -150,10 +158,6 @@ div.leaflet-popup-content { width: auto !important; }
   border-radius:5px;
 }
 
-.leaflet-marker-icon.k-identity {
-  background:white;
-  border-radius:5px;
-}
 
 .leaflet-marker-icon.topic {
   border-bottom: black 2px solid;
