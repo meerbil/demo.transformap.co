@@ -254,7 +254,7 @@ function buildOverpassQuery() {
 
 var debugLayer,
     map,
-    markers = new PruneClusterForLeaflet(60,20),
+    markers = new PruneClusterForLeaflet(20,10),
     lc = {},
     default_overlay = {
       "POIs" : markers
@@ -1565,7 +1565,7 @@ function loadPoi() {
       iconSize: new L.Point(overpass_config.icon_size, overpass_config.icon_size),
       iconAnchor: new L.Point(overpass_config.icon_size / 2, overpass_config.icon_size / 2),
       popupAnchor: new L.Point(0, - overpass_config.icon_size / 2),
-      className: "v-" + data.tags[icon_class] + " k-" + icon_class
+      className: "k-" + icon_class// + " k-" + icon_class
     });
 
     var pdata = {
