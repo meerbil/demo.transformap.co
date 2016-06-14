@@ -47,14 +47,16 @@
         q_array: [ [ '"wheelchair"~"limited|no"', '"kerb"' ], [ '"kerb"','"traffic_signals:minimap"="wrong"' ], ['"wheelchair"~"limited|no"','"highway"="footway"'],  ],
         icon_folder : "wheelchair",
         servers : [  "//overpass-api.de/api/", "http://overpass.osm.rambler.ru/cgi/", "http://overpass.osm.rambler.ru/cgi/" ],
-        icon_tags : [ "incline","incline:across","traffic_signals:minimap","width","kerb" ]
+        icon_tags : [ "overtaking:wheelchair","wheelchair:turning","incline","incline:across","traffic_signals:minimap","width","kerb" ],
+        class_selector_key : { key: "image" }
     }
 
     buildOverpassQuery();
  //   overpass_query_nodes = '//overpass-api.de/api/interpreter?data=[out:json][timeout:180][bbox:BBOX];node["wheelchair"~"limited|no"]["kerb"];out;node["kerb"]["traffic_signals:minimap"="wrong"];out;';
-    overpass_query_nodes = 'http://api.openstreetmap.fr/oapi/interpreter?data=[out:json][timeout:180][bbox:47.0621415,15.4425287,47.0796206,15.4559612];node["wheelchair"~"limited|no"]["kerb"];out;node["kerb"]["traffic_signals:minimap"="wrong"];out;';
+ //   overpass_query_nodes = 'http://api.openstreetmap.fr/oapi/interpreter?data=[out:json][timeout:180][bbox:47.056,15.4425287,47.0796206,15.473];node["wheelchair"~"limited|no"]["kerb"];out;node["kerb"]["traffic_signals:minimap"="wrong"];out;node["kerb"]["image"];out;';
+    overpass_query_nodes = 'http://overpass-api.de/api/interpreter?data=[out:json][timeout:180][bbox:47.056,15.4425287,47.0796206,15.473];node["wheelchair"~"limited|no"]["kerb"];out;node["kerb"]["traffic_signals:minimap"="wrong"];out;node["kerb"]["image"];out;';
  //   overpass_query_ways = 'http://overpass.osm.rambler.ru/cgi/interpreter?data=[out:json][timeout:180][bbox:BBOX];(way["wheelchair"~"limited|no"]["highway"~"footway|cycleway|service"];node(w));out;';
-    overpass_query_ways = 'http://overpass-api.de/api/interpreter?data=[out:json][timeout:180][bbox:47.0621415,15.4425287,47.0796206,15.4559612];(way["wheelchair"~"limited|no"]["highway"~"footway|cycleway|service"];node(w));out;';
+    overpass_query_ways = 'http://overpass-api.de/api/interpreter?data=[out:json][timeout:180][bbox:47.056,15.4425287,47.0796206,15.473];(way["wheelchair"~"limited|no"]["highway"~"footway|cycleway|service"];node(w));out;(way["overtaking:wheelchair"="no"];node(w));out;';
     overpass_query_rels = 'http://localhost/?data=BBOX';
 
  /*   var about_text = '<p>This map displays OpenStreetMap objects relevant for wheelchair routing.</p>'
