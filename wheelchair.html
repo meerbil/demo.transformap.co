@@ -30,10 +30,26 @@
     var assethost = hostname + window.parent.document.location.pathname.replace(/\/[^/]*$/,'/');
   </script>
 
-<!--  <sc ript src="sidebar.js"></scrip t>
-  <sc ript src="filters.js"></scri pt > -->
+<script src="sidebar.js"></script>
+<!--    <sc ript src="filters.js"></scri pt > -->
   <script src="map.js"></script>
   <script>
+
+var different_maps = [
+    { url : "http://mm.linuxtage.at/osm/routing/wheelchair-normal/" ,
+      name : "Routing Normal",
+      image: assethost+"assets/transformap/pngs/wheelchair/" + 24 + "/Wheelchair_Accessible.png"
+    }, 
+    { url : "http://mm.linuxtage.at/osm/routing/wheelchair-electro/" ,
+      name : "Routing Electro",
+      image: assethost+"assets/transformap/pngs/wheelchair/" + 24 + "/Wheelchair_Accessible.png"
+    },
+    { url : "http://mm.linuxtage.at/osm/routing/wheelchair-athletic/" ,
+      name : "Routing Athletic",
+      image: assethost+"assets/transformap/pngs/wheelchair/" + 24 + "/Wheelchair_Accessible.png"
+    } 
+];
+
     /*
      * overpass syntax:
      * [out:json][timeout:180][bbox:BBOX];
@@ -59,12 +75,63 @@
     overpass_query_ways = 'http://overpass-api.de/api/interpreter?data=[out:json][timeout:180][bbox:47.056,15.4425287,47.0796206,15.473];(way["wheelchair"~"limited|no"]["highway"~"footway|cycleway|service"];node(w));out;(way["overtaking:wheelchair"="no"];node(w));out;(way["incline:length"];node(w));out;';
     overpass_query_rels = 'http://localhost/?data=BBOX';
 
- /*   var about_text = '<p>This map displays OpenStreetMap objects relevant for wheelchair routing.</p>'
+   var about_text = '<p>This map displays OpenStreetMap objects relevant for wheelchair routing.</p>'
         + about.overpass
         + about.osm_edit
-        + about.export_opendata ; */
+        + about.export_opendata ; 
 
     var mapkey = '<li title="too much types to display a legend">When clicking on a POI, look for one of these tags: amenity, shop, leisure. They should tell you what type it is.</li>';
+
+    var mapkey = '<li onClick="toggleInfoBox(\'steig-red.\');">'
+      + '<img src="'+assethost+'assets/transformap/pngs/wheelchair/24/incline_up_red.png" /> '
+      + 'Hohe Steigung ab 6%'
+      + '<div class="InfoBox nointend" id="steig-red.">Steigungen &gt; 6%</div>'
+      + '</li>';
+    mapkey += '<li onClick="toggleInfoBox(\'steig-y.\');">'
+      + '<img src="'+assethost+'assets/transformap/pngs/wheelchair/24/incline_up_yellow.png" /> '
+      + 'Mittlere Steigung bis 6%'
+      + '<div class="InfoBox nointend" id="steig-y.">Steigungen bis 6%</div>'
+      + '</li>';
+    mapkey += '<li onClick="toggleInfoBox(\'steig-q.\');">'
+      + '<img src="'+assethost+'assets/transformap/pngs/wheelchair/24/incline_across-right_red.png" /> '
+      + 'Hohe Querneigung%'
+      + '<div class="InfoBox nointend" id="steig-q.">Hohe Querneigungen ab 3%</div>'
+      + '</li>';
+    mapkey += '<li onClick="toggleInfoBox(\'schmal.\');">'
+      + '<img src="'+assethost+'assets/transformap/pngs/wheelchair/24/width-bad.png" /> '
+      + 'Engstelle'
+      + '<div class="InfoBox nointend" id="schmal.">Engstellen, meistens &lt; 90cm</div>'
+      + '</li>';
+    mapkey += '<li onClick="toggleInfoBox(\'hoch.\');">'
+      + '<img src="'+assethost+'assets/transformap/pngs/wheelchair/24/kerb=raised.png" /> '
+      + 'Kante &gt; 3cm'
+      + '<div class="InfoBox nointend" id="hoch.">Gehsteigkanten &gt; 3cm</div>'
+      + '</li>';
+    mapkey += '<li onClick="toggleInfoBox(\'turn.\');">'
+      + '<img src="'+assethost+'assets/transformap/pngs/wheelchair/24/wheelchair:turning=no.png" /> '
+      + 'Wendefläche zu klein'
+      + '<div class="InfoBox nointend" id="turn.">Zuwenig Platz zum Wenden, müsste > 150×150cm sein.</div>'
+      + '</li>';
+    mapkey += '<li onClick="toggleInfoBox(\'ausw.\');">'
+      + '<img src="'+assethost+'assets/transformap/pngs/wheelchair/24/overtaking:wheelchair=no.png" /> '
+      + 'Fehlende Ausweichen'
+      + '<div class="InfoBox nointend" id="ausw.">Wenn der Weg schmaler als 1.8m ist, müsste alle 18m eine Ausweichstelle sein</div>'
+      + '</li>';
+    mapkey += '<li onClick="toggleInfoBox(\'traf.\');">'
+      + '<img src="'+assethost+'assets/transformap/pngs/wheelchair/24/traffic_signals:minimap=wrong.png" /> '
+      + 'Taktile Minimap falsch'
+      + '<div class="InfoBox nointend" id="traf.">Falsche Taktile Karte bei Fußgängerampeln. Für Details siehe Text.</div>'
+      + '</li>';
+    mapkey += '<li onClick="toggleInfoBox(\'other.\');">'
+      + '<img src="'+assethost+'assets/transformap/pngs/wheelchair/24/unknown.png" /> '
+      + 'Sonstige'
+      + '<div class="InfoBox nointend" id="other.">Alles was in keine andere Kategorie passt.</div>'
+      + '</li>';
+    mapkey += '<li onClick="toggleInfoBox(\'photo.\');">'
+      + '<img src="'+assethost+'assets/transformap/pngs/wheelchair/24/unknown.png" style="background:blue"/> '
+      + 'Blau: Foto'
+      + '<div class="InfoBox nointend" id="photo.">Bei allen Icons mit Blauem Hintergrund gibt es ein Bild zur Veranschaulichung im Popup.</div>'
+      + '</li>';
 
     $(function () {
 

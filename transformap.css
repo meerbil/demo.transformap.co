@@ -381,6 +381,9 @@ body.ie #notificationbar {
     text-align:left;
     cursor:pointer;
 }
+#mapkey li div.InfoBox.nointend {
+    margin-left:0;
+}
 #mapkey li div.InfoBox:before,
 #filters ul.subfilter div.InfoBox:before {
     content:"×";
