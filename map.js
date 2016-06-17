@@ -535,21 +535,49 @@ function getIconTag(tags) {
 }
 
 function chooseIconSrc(tags,iconsize) {
-    var icon_tag = getIconTag(tags);
 
-    var icon_url = "";
-    if(!icon_tag) {
-      icon_url = assethost+"assets/transformap/pngs/" + overpass_config.icon_folder + "/" + iconsize + "/unknown.png";
-    } else {
-      var tag_value = tags[icon_tag];
-      tag_value = tag_value.replace(/[%]/,"_");
+  var icon_uri_start = assethost+"assets/transformap/pngs/" + overpass_config.icon_folder + "/" + iconsize + "/";
+  var icon_url = "";
 
-      if (tag_value.indexOf(";") >= 0) // more than one item, take generic icon
-        icon_url = assethost+"assets/transformap/pngs/" + overpass_config.icon_folder + "/" + iconsize + "/generic.png";
-      else
-        icon_url = assethost+"assets/transformap/pngs/" + overpass_config.icon_folder + "/" + iconsize + "/" + icon_tag + "=" + tag_value + ".png";
-    }
-    return icon_url;
+  if(tags["traffic_signals:minimap"] == "wrong")
+    return icon_uri_start + "traffic_signals:minimap=wrong.png";
+
+  if(tags.kerb)
+    return icon_uri_start + "kerb=" + tags.kerb + ".png";
+
+  if(tags["wheelchair:turning"] == "no")
+    return icon_uri_start + "wheelchair:turning=no.png";
+
+  if(tags.width) {
+    if(tags.width < 0.9)
+      return icon_uri_start + "width-bad.png";
+  }
+
+  if(tags.incline) {
+    var incline = Math.abs(parseFloat(tags.incline));
+    if(incline > 6 || tags.incline == "down" || tags.incline == "up")
+      return icon_uri_start + "incline_up_red.png";
+    if(incline > 3)
+      return icon_uri_start + "incline_up_orange.png";
+  }
+
+  if(tags["incline:across"]){
+    var incline_across = Math.abs(parseFloat(tags["incline:across"]));
+    if(incline_across > 6)
+      return icon_uri_start + "incline_across-right_red.png";
+  }
+
+  if(tags["overtaking:wheelchair"] == "no")
+    return icon_uri_start + "overtaking:wheelchair=no.png";
+
+  if(tags["incline:across"]){
+    var incline_across = Math.abs(parseFloat(tags["incline:across"]));
+    if(incline_across > 3)
+      return icon_uri_start + "incline_across-right_red.png";
+  }
+
+
+  return icon_uri_start + "/unknown.png";
 }
 
 var disableLoadPOI = false;
@@ -1347,7 +1375,9 @@ function loadPoi() {
                                        ( (tags["wheelchair"] == "limited" ) ? "limited (assist needed)" :
                                          ( (tags["wheelchair"] == "no") ? "no" : tags["wheelchair"] ) ) ) +
                                      ( tags["wheelchair:description"] ? ("\n" + secHTML(tags["wheelchair:description"])) : "" )
-                                     + "'/>") : "")
+                                     + "'/>") : "")+
+              (tags["wheelchair:description"] ? ("\n" + secHTML(tags["wheelchair:description"])) : "" )
+
               ))
         .append($('<td>').append(
             (tags["website"] ? (url_ify(tags["website"],"website") + "<br>") : "" ) +
