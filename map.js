@@ -263,7 +263,7 @@ var debugLayer,
 function initMap(defaultlayer,base_maps,overlay_maps,lat,lon,zoom) {
   var center = new L.LatLng(lat ? lat : 0, lon ? lon : 0);
 
-  var overriddenId = new L.Control.EditInOSM.Editors.Id({ url: "http://editor.transformap.co/#background=Bing&map=" });
+  var overriddenId = (L.Control.EditInOSM) ? new L.Control.EditInOSM.Editors.Id({ url: "http://editor.transformap.co/#background=Bing&map=" }) : null
 
   var MapQuestOpen_OSM = new L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpeg', {
       subdomains: '1234',
