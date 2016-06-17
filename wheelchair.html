@@ -21,7 +21,7 @@
 
   <script src="leaflet-hash.js"></script>
   <script src="leaflet-search.min.js"></script>
-  <script src="Leaflet.EditInOSM.js"></script>
+  <!--  < s c ript src="Leaflet.EditInOSM.js"></scri pt>-->
 
   <script src='L.Control.Locate.mine.js'></script>
 
@@ -77,7 +77,7 @@ var different_maps = [
 
    var about_text = '<p>This map displays OpenStreetMap objects relevant for wheelchair routing.</p>'
         + about.overpass
-        + about.osm_edit
+ //       + about.osm_edit
         + about.export_opendata ; 
 
     var mapkey = '<li title="too much types to display a legend">When clicking on a POI, look for one of these tags: amenity, shop, leisure. They should tell you what type it is.</li>';
@@ -94,8 +94,8 @@ var different_maps = [
       + '</li>';
     mapkey += '<li onClick="toggleInfoBox(\'steig-q.\');">'
       + '<img src="'+assethost+'assets/transformap/pngs/wheelchair/24/incline_across-right_red.png" /> '
-      + 'Hohe Querneigung%'
-      + '<div class="InfoBox nointend" id="steig-q.">Hohe Querneigungen ab 3%</div>'
+      + 'Hohe Querneigung'
+      + '<div class="InfoBox nointend" id="steig-q.">Hohe Querneigungen ab 6%</div>'
       + '</li>';
     mapkey += '<li onClick="toggleInfoBox(\'schmal.\');">'
       + '<img src="'+assethost+'assets/transformap/pngs/wheelchair/24/width-bad.png" /> '
@@ -137,7 +137,8 @@ var different_maps = [
 
       var osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: [attr.osm, attr.osm_tiles, attr.overpass, attr.greenmap].join(', '),
-        maxZoom : 19,
+        maxZoom : 20,
+        maxNativeZoom: 19,
         noWrap: true
       });
       var base_maps = {
