@@ -51,6 +51,7 @@ function getVisibleMarkers() {
 
 
 function updatePOIlist(force) {
+  return; // for wheelchair, POIlist not needed
     if(!force && open_sidebox != "sidebox-list") //run only when menu open
         return;
 
@@ -181,9 +182,9 @@ function createSideBar() {
   }
 
   // List of POIs
-  $('#tmap_sidebar').append('<div id="sidebox-list" class="box hidden"></div>');
-  $('#sidebox-list').append('<h2 onClick="updatePOIlist(true);toggleSideBox(\'sidebox-list\');">List of <span title="Point of Interest">POIs</span></h2>');
-  $('#sidebox-list').append('<ul id="POIlist" class="boxcontent"></ul>');
+//  $('#tmap_sidebar').append('<div id="sidebox-list" class="box hidden"></div>');
+//  $('#sidebox-list').append('<h2 onClick="updatePOIlist(true);toggleSideBox(\'sidebox-list\');">List of <span title="Point of Interest">POIs</span></h2>');
+//  $('#sidebox-list').append('<ul id="POIlist" class="boxcontent"></ul>');
 
   // Map Key
   $('#tmap_sidebar').append('<div id="sidebox-mapkey" class="box hidden"></div>');
