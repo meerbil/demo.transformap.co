@@ -194,7 +194,7 @@ var overpass_ql_text,
     overpass_query_nodes,
     overpass_query_ways,
     overpass_query_rels,
-    object_type_keys = [ "amenity", "shop", "tourism", "craft", "garden:type", "leisure", "office", "man_made", "landuse", "club", "farm_boxes", "barrier", "footway" ] ;
+    object_type_keys = [ "amenity", "shop", "tourism", "craft", "garden:type", "leisure", "office", "man_made", "landuse", "club", "farm_boxes", "barrier", "highway","historic" ] ;
 
 /*
  * sets global the vars above
@@ -1288,6 +1288,7 @@ function loadPoi() {
   function fillPopup(tags,type,id,lat,lon) {
 
     var tags_to_ignore = [ "name" , "ref", "addr:street", "addr:housenumber", "addr:postcode", "addr:city", "addr:suburb", "addr:country","website","url","contact:website","contact:url","email","contact:email","phone","contact:phone","fax","contact:fax","created_by","area","layer","room","indoor","twitter","contact:twitter","link:twitter", "contact:google_plus", "google_plus", "link:google_plus", "contact:facebook","facebook","link:facebook","facebook:page","website:facebook","url:facebook","contact:youtube","youtube","link:youtube","wheelchair","wikipedia","wikidata","image","source","lit","segregated","motor_vehicle" ];
+    var tags_to_ignore = [ "is_in" ];
 
     var r = $('<table>');
 
@@ -1501,7 +1502,7 @@ function loadPoi() {
 
         var htlink = $('<a>').attr('href', begin + value).text(decodeURIComponent(value));
         r.append($('<tr>').addClass('tag').append($('<th>').text(key)).append($('<td>').append(htlink)));
-      } else if ( key == 'wikidata' ) { 
+      } else if (/wikidata$/.test(key)) { 
         var begin = (! /^http/.test(value)) ? "https://www.wikidata.org/wiki/" : ""; //http[s] is implicit here
 
         var htlink = $('<a>').attr('href', begin + value).text(decodeURIComponent(value));
@@ -1725,7 +1726,7 @@ function loadPoi() {
       properties: {name: fillPopup(data.tags,data.type,data.id,centroid.lat,centroid.lon), style: style}
     });
 
-    return bindPopupOnData(centroid); //bind on centroid
+    return; // bindPopupOnData(centroid); //bind on centroid
   }
   function relationFunction(data) {
     // calculate mean coordinates as center
