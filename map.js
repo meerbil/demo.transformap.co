@@ -265,21 +265,23 @@ function initMap(defaultlayer,base_maps,overlay_maps,lat,lon,zoom) {
 
   var overriddenId = new L.Control.EditInOSM.Editors.Id({ url: "http://editor.transformap.co/#background=Bing&map=" });
 
-  var MapQuestOpen_OSM = new L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpeg', {
+/*  var MapQuestOpen_OSM = new L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpeg', {
       subdomains: '1234',
       attribution: [attr.osm, attr.mapquest, attr.overpass, attr.greenmap].join(', '),
       maxZoom : 19,
       maxNativeZoom: 18 ,
       noWrap: true
-  });
+  }); MQ open no longer here */
   var osm = new L.TileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: [attr.osm, attr.osm_tiles, attr.overpass, attr.greenmap].join(', '),
       maxZoom : 19,
       noWrap: true
   });
 
-  if(!defaultlayer)
-    defaultlayer = (window.parent.document.location.protocol == "https:") ? osm : MapQuestOpen_OSM;
+  /*if(!defaultlayer)
+    defaultlayer = (window.parent.document.location.protocol == "https:") ? osm : MapQuestOpen_OSM;*/
+  defaultlayer = osm;
+
   if(!overlay_maps)
     overlay_maps = default_overlay;
 
@@ -298,7 +300,7 @@ function initMap(defaultlayer,base_maps,overlay_maps,lat,lon,zoom) {
   if(!base_maps) {
 
     base_maps = {
-      'MapQuestOpen': MapQuestOpen_OSM,
+//      'MapQuestOpen': MapQuestOpen_OSM,
       'OpenSteetMap - Mapnik': osm
     };
   }
