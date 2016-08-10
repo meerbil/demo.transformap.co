@@ -2,11 +2,32 @@
   "version": 0.6,
   "generator": "Overpass API",
   "osm3s": {
-    "timestamp_osm_base": "2016-01-23T17:45:02Z",
+    "timestamp_osm_base": "2016-08-10T08:25:03Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
 
+{
+  "type": "node",
+  "id": 263880657,
+  "lat": 48.1283977,
+  "lon": 11.5969840,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "14",
+    "addr:postcode": "81667",
+    "addr:street": "Weißenburger Straße",
+    "child_friendly": "yes",
+    "fair_trade": "only",
+    "identity": "collaborative_economy",
+    "interaction": "buying_and_selling",
+    "name": "Weltladen",
+    "shop": "convenience",
+    "source": "survey by BenE München",
+    "wheelchair": "limited"
+  }
+},
 {
   "type": "node",
   "id": 266698132,
@@ -20,11 +41,15 @@
     "addr:street": "Innere Wiener Straße",
     "identity": "permaculture",
     "interaction": "buying_and_selling",
-    "name": "Grüner Markt",
+    "name": "Vollcorner",
     "old_name": "Reformhaus Vitalia",
+    "old_name_1": "Grüner Markt",
+    "opening_hours": "Mo-Sa 08:00-20:00",
     "organic": "only",
+    "phone": "+49 89 666 16 798",
     "provides": "food+drink",
     "shop": "supermarket",
+    "website": "http://www.vollcorner.de/biomarkt-filialen-muenchen/haidhausen/innere-wiener-strasse-52/",
     "wheelchair": "yes"
   }
 },
@@ -48,6 +73,101 @@
     "provides": "food+drink;culture;learning_opportunities;community;participation",
     "website": "http://www.kirjakahvila.org/",
     "wifi": "free"
+  }
+},
+{
+  "type": "node",
+  "id": 297933544,
+  "lat": 48.1367634,
+  "lon": 11.5879362,
+  "tags": {
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Top Second",
+    "note": "clothes",
+    "phone": "+49 89 21869466",
+    "shop": "second_hand",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 298902870,
+  "lat": 48.1348782,
+  "lon": 11.5862341,
+  "tags": {
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Déjàvu",
+    "phone": "+49 160 8961140",
+    "shop": "second_hand"
+  }
+},
+{
+  "type": "node",
+  "id": 299513599,
+  "lat": 48.1399869,
+  "lon": 11.5829063,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "10",
+    "addr:postcode": "80539",
+    "addr:street": "Wurzerstraße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Exclusiv First-Class Second-Hand",
+    "opening_hours": "Tu-Fr 10:00-18:00;Sa 10:00-14:00",
+    "phone": "+49 89 29160170",
+    "shop": "second_hand",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 299513600,
+  "lat": 48.1399375,
+  "lon": 11.5828895,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "11",
+    "addr:postcode": "80539",
+    "addr:street": "Wurzerstraße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "second and first",
+    "shop": "second_hand",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 307757395,
+  "lat": 48.1966536,
+  "lon": 11.5455304,
+  "tags": {
+    "description": "clothes and other supplies for children",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Nipi Tiri",
+    "opening_hours": "Mo-Fr 10:00-18:00",
+    "phone": "+49 170 6667666",
+    "shop": "second_hand"
+  }
+},
+{
+  "type": "node",
+  "id": 331359819,
+  "lat": 48.1301862,
+  "lon": 11.6215155,
+  "tags": {
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Flohpalast",
+    "shop": "second_hand",
+    "wheelchair": "limited",
+    "wheelchair:description": "Aufgrund enger Gänge nur bedingt Rollstuhl geeignet."
   }
 },
 {
@@ -78,6 +198,24 @@
 },
 {
   "type": "node",
+  "id": 352970956,
+  "lat": 60.2073567,
+  "lon": 24.9601568,
+  "tags": {
+    "addr:city": "Helsinki",
+    "addr:housenumber": "44-46C9",
+    "addr:postcode": "00560",
+    "addr:street": "Limingantie",
+    "contact:email": "anita.lintula@gmail.com",
+    "contact:name": "Anita Lintula",
+    "description": "Olemme tuore osuuskunta, joka tuottaa tällä hetkellä pienessä mittakaavassa hyvinvointipalveluita.Tavoitteena on luoda toimeentuloa jäsenille ja myös luoda liiketoimintamalleja, jotka mahdollistavat lahjoitustalouden.",
+    "identity": "solidarity_economy",
+    "name": "Osuuskunta Jalavala",
+    "topic": "health"
+  }
+},
+{
+  "type": "node",
   "id": 393758097,
   "lat": 52.1092099,
   "lon": 5.0890742,
@@ -94,6 +232,24 @@
     "name": "De Kleine Baron",
     "provides": "food+drink",
     "smoking": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 416821863,
+  "lat": 48.1575355,
+  "lon": 11.5621612,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "81",
+    "addr:postcode": "80797",
+    "addr:street": "Schleißheimer Straße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Lebhaft",
+    "shop": "second_hand",
+    "wheelchair": "no"
   }
 },
 {
@@ -117,6 +273,18 @@
     "shop": "second_hand",
     "source": "Solikon 2015",
     "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 429621459,
+  "lat": 48.2570274,
+  "lon": 11.4628879,
+  "tags": {
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Mäusekiste",
+    "shop": "second_hand"
   }
 },
 {
@@ -147,6 +315,48 @@
     "source": "Solikon 2015",
     "start_date": "1978",
     "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 454557440,
+  "lat": 48.2248093,
+  "lon": 11.6761999,
+  "tags": {
+    "addr:city": "Ismaning",
+    "addr:country": "DE",
+    "addr:housenumber": "6",
+    "addr:postcode": "85737",
+    "addr:street": "Bahnhofstraße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Radsport Rösch",
+    "opening_hours": "Mo-Fr 09:00-12:00,13:00-18:00;Sa 09:00-14:00",
+    "service:bicycle:repair": "yes",
+    "service:bicycle:retail": "yes",
+    "service:bicycle:second_hand": "yes",
+    "shop": "bicycle",
+    "website": "www.radsport-roesch.de",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 476418699,
+  "lat": 48.1266251,
+  "lon": 11.3659220,
+  "tags": {
+    "addr:city": "Germering",
+    "addr:country": "DE",
+    "addr:housenumber": "4",
+    "addr:postcode": "82110",
+    "addr:street": "Otto-Wagner-Straße",
+    "contact:website": "http://www.weltoffen-germering.de/",
+    "fair_trade": "only",
+    "identity": "collaborative_economy",
+    "interaction": "buying_and_selling",
+    "name": "Weltoffen",
+    "shop": "yes"
   }
 },
 {
@@ -272,7 +482,9 @@
     "contact:google_plus": "https://plus.google.com/+RealraumAt/",
     "contact:phone": "+43 780 700 888 524",
     "description": "realraum - hackerspace in Graz. Labor für Elektronik, Computer und Technik Geeks",
+    "drink:beer": "yes",
     "drink:club-mate": "yes",
+    "drink:makava": "yes",
     "identity": "commons",
     "interaction": "diy_and_dit",
     "internet_access": "yes",
@@ -280,14 +492,60 @@
     "mode_of_organisation:ownership_structure": "Verein",
     "mode_of_organisation:self_managed": "yes",
     "name": "realraum",
-    "operator": "Verein für Technik in Kultur und Gesellschaft",
+    "operator": "realraum - Verein für Technik in Kultur und Gesellschaft",
     "payment:bitcoin": "yes",
     "production_input:knowledge:free_licence": "yes",
     "production_input:knowledge:public_domain": "yes",
     "provides": "learning_opportunities",
+    "smoking": "no",
     "source": "survey",
     "website": "http://www.realraum.at",
     "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 701444306,
+  "lat": 48.1352105,
+  "lon": 11.5707440,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "21",
+    "addr:postcode": "80331",
+    "addr:street": "Sendlinger Straße",
+    "contact:website": "http://www.secondhandandmore.com/",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "ReSales",
+    "second_hand": "yes",
+    "shop": "clothes",
+    "source": "survey by BenE München",
+    "toilets:wheelchair": "no",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 709200948,
+  "lat": 48.1381439,
+  "lon": 11.5530582,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housename": "Einewelthaus",
+    "addr:housenumber": "80",
+    "addr:postcode": "80336",
+    "addr:street": "Schwanthalerstraße",
+    "contact:website": "https://www.einewelthaus.de/das-haus/laden/",
+    "email": "laden@einewelthaus.de",
+    "identity": "collaborative_economy",
+    "interaction": "buying_and_selling",
+    "name": "Weltladen",
+    "opening_hours": "Mo-Sa 12:00-20:00",
+    "phone": "089 85637534",
+    "shop": "convenience",
+    "website": "http://www.einewelthaus.de/das-haus/laden/"
   }
 },
 {
@@ -313,8 +571,8 @@
 {
   "type": "node",
   "id": 865960313,
-  "lat": 52.5007280,
-  "lon": 13.4217485,
+  "lat": 52.5007247,
+  "lon": 13.4217244,
   "tags": {
     "addr:city": "Berlin",
     "addr:country": "DE",
@@ -364,6 +622,18 @@
 },
 {
   "type": "node",
+  "id": 933515248,
+  "lat": 48.1252152,
+  "lon": 11.3660799,
+  "tags": {
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Secondelli",
+    "shop": "second_hand"
+  }
+},
+{
+  "type": "node",
   "id": 977686791,
   "lat": 52.4919181,
   "lon": 13.3882686,
@@ -389,35 +659,22 @@
 },
 {
   "type": "node",
-  "id": 986339170,
-  "lat": 52.5004159,
-  "lon": 13.4221967,
+  "id": 1048653066,
+  "lat": 48.1383089,
+  "lon": 11.5646202,
   "tags": {
-    "addr:city": "Berlin",
+    "addr:city": "München ‎",
     "addr:country": "DE",
-    "addr:housename": "SO36",
-    "addr:housenumber": "190",
-    "addr:postcode": "10999",
-    "addr:street": "Oranienstraße",
-    "addr:suburb": "Kreuzberg",
-    "amenity": "nightclub",
-    "contact:email": "post@so36.de",
-    "contact:facebook": "http://www.facebook.com/pages/_/171604075171",
-    "contact:google_plus": "https://plus.google.com/u/0/113966892973134215750",
-    "contact:phone": "+49 30 61401306",
-    "contact:website": "http://so36.de",
-    "contact:yelp": "http://www.yelp.com/biz/so36-berlin",
-    "description": "concert collective;concert venue;events",
-    "identity": "solidarity_economy",
-    "link:qype": "http://www.qype.com/place/3091",
-    "link:unlike": "http://unlike.net/berlin/after-dark/so36",
-    "name": "SO36",
-    "provides": "culture;spaces",
-    "smoking": "isolated",
-    "source": "Solikon 2015",
-    "wheelchair": "yes",
-    "wheelchair:description": "Rampe am Eingang wird auf Nachfrage hingelegt; Drinnen: Rollstuh auf ein Podest heben zum Konzert schauen",
-    "wikipedia": "de:SO36"
+    "addr:housenumber": "2",
+    "addr:postcode": "80331",
+    "addr:street": "Sonnenstraße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "ReSales",
+    "second_hand": "yes",
+    "shop": "clothes",
+    "source": "survey by BenE München",
+    "wheelchair": "yes"
   }
 },
 {
@@ -479,6 +736,33 @@
     "source": "Solikon 2015",
     "start_date": "1981",
     "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1270076121,
+  "lat": 48.1333863,
+  "lon": 11.5395438,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:postcode": "80339",
+    "addr:street": "Georg-Freundorfer-Platz",
+    "amenity": "marketplace",
+    "contact:email": "info@muenchner-bauernmaerkte.de",
+    "contact:fax": "+49 89 55873470",
+    "contact:phone": "+49 89 55873450",
+    "food": "yes",
+    "identity": "solidarity_economy",
+    "interaction": "buying_and_selling",
+    "name": "Bauernmarkt",
+    "opening_hours": "Th 10:00-18:00",
+    "operator": "Bauernmarkt München e.V.",
+    "organic": "limited",
+    "provides": "food+drink",
+    "regional": "yes",
+    "source": "survey by BenE München",
+    "url": "http://www.muenchener-bauernmaerkte.de/theresienhoehe-georg-freundorfer-platz.html"
   }
 },
 {
@@ -593,8 +877,8 @@
 {
   "type": "node",
   "id": 1373592781,
-  "lat": 47.0638340,
-  "lon": 15.4423455,
+  "lat": 47.0638844,
+  "lon": 15.4423345,
   "tags": {
     "addr:city": "Graz",
     "addr:country": "AT",
@@ -612,6 +896,139 @@
     "shop": "bicycle",
     "source": "survey",
     "website": "http://www.fahrradkueche.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 1433739065,
+  "lat": 48.0725668,
+  "lon": 11.6526137,
+  "tags": {
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Tand und Trödel",
+    "operator": "Zweckverband München-Südost",
+    "shop": "second_hand"
+  }
+},
+{
+  "type": "node",
+  "id": 1437452475,
+  "lat": 48.2639915,
+  "lon": 11.4790628,
+  "tags": {
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Gebrauchtwarenmarkt",
+    "opening_hours": "We 10:00-12:00, 14:00-18:00",
+    "operator": "Caritas",
+    "shop": "second_hand",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 1478901293,
+  "lat": 48.1337730,
+  "lon": 11.5757294,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "10",
+    "addr:postcode": "80469",
+    "addr:street": "Utzschneiderstraße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Alexa's",
+    "second_hand": "yes",
+    "shop": "fabric",
+    "website": "http://alexas-vintage-retro-fashion.com"
+  }
+},
+{
+  "type": "node",
+  "id": 1514845742,
+  "lat": 48.1291217,
+  "lon": 11.5766691,
+  "tags": {
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Thibault",
+    "shop": "second_hand"
+  }
+},
+{
+  "type": "node",
+  "id": 1528279918,
+  "lat": 48.1395236,
+  "lon": 11.5022573,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:postcode": "80687",
+    "addr:street": "Agnes-Bernauer-Straße",
+    "amenity": "marketplace",
+    "contact:email": "info@muenchner-bauernmaerkte.de",
+    "contact:fax": "+49 89 55873470",
+    "contact:phone": "+49 89 55873450",
+    "contact:website": "www.muenchner-bauernmaerkte.de",
+    "food": "yes",
+    "identity": "solidarity_economy",
+    "interaction": "buying_and_selling",
+    "opening_hours": "Fr 08:00-13:00",
+    "operator": "Bauernmarkt München e.V.",
+    "organic": "limited",
+    "provides": "food+drink",
+    "regional": "yes",
+    "source": "survey by BenE München"
+  }
+},
+{
+  "type": "node",
+  "id": 1573738303,
+  "lat": 48.1530415,
+  "lon": 11.5656466,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "104",
+    "addr:postcode": "80798",
+    "addr:street": "Augustenstraße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "The Munich Readery",
+    "opening_hours": "Mo-Fr 11:00-20:00;Sa 10:00-18:00;PH off",
+    "second_hand": "yes",
+    "shop": "books",
+    "website": "http://www.readery.de/",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1617162554,
+  "lat": 49.4502368,
+  "lon": 11.0796385,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "33-37",
+    "addr:postcode": "90402",
+    "addr:street": "Königstraße",
+    "amenity": "bar",
+    "email": "info@weinerei.de",
+    "identity": "commons",
+    "interaction": "diy_and_dit",
+    "internet_access": "no",
+    "name": "Weinerei",
+    "opening_hours": "Fr-Sa 21:00-01:00",
+    "payment:cash": "yes",
+    "payment:none": "yes",
+    "provides": "food+drink;culture;community",
+    "smoking": "no",
+    "topic": "food+drink;culture;community",
+    "website": "http://www.weinerei.de/",
+    "wheelchair": "no"
   }
 },
 {
@@ -642,6 +1059,44 @@
 },
 {
   "type": "node",
+  "id": 1781439398,
+  "lat": 48.1123471,
+  "lon": 11.5767829,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Hoibe Hoibe",
+    "opening_hours": "Th-Fr 14:00-19:00;Sa 11:00-15:00",
+    "shop": "second_hand",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 1813648427,
+  "lat": 48.1505420,
+  "lon": 11.5374882,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "112",
+    "addr:postcode": "80636",
+    "addr:street": "Blutenburgstraße",
+    "email": "kleidsam@diakonia.de",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "kleidsam",
+    "phone": "+49 89 540434-34",
+    "second_hand": "only",
+    "shop": "clothes",
+    "website": "http://www.kleidsam-muenchen.de",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
   "id": 1927763622,
   "lat": 52.4865362,
   "lon": 13.4309520,
@@ -659,6 +1114,7 @@
     "mode_of_organisation:self_managed": "yes",
     "name": "Tristeza",
     "source": "Solikon 2015",
+    "toilets:wheelchair": "yes",
     "website": "http://tristeza.org/",
     "wheelchair": "limited",
     "wheelchair:description": "Eine flache Rampe führt in den Laden, aber der Keller ist nicht mit dem Rollstuhl zu erreichen. DIe Toiletten sind zwar ebenerdig, aber der Weg ist eng, die Türen schwergängig und ohne Hilfe kommt niemand mit dem Rollstuhl auf das WC."
@@ -683,6 +1139,7 @@
     "internet_access": "wlan",
     "mode_of_organisation:self_managed": "yes",
     "name": "K-Fetisch",
+    "opening_hours": "Tu-Su 10:00-00:00",
     "provides": "culture;learning_opportunities",
     "smoking": "isolated",
     "source": "Solikon 2015",
@@ -856,6 +1313,113 @@
 },
 {
   "type": "node",
+  "id": 2322317565,
+  "lat": 47.0699754,
+  "lon": 15.4288030,
+  "tags": {
+    "addr:city": "Graz",
+    "addr:country": "AT",
+    "addr:housenumber": "20",
+    "addr:postcode": "8020",
+    "addr:street": "Kernstockgasse",
+    "amenity": "community_centre",
+    "contact:email": "christian.sprung@stadtlaborgraz.at",
+    "contact:mobile": "+43 676 4068816",
+    "description": "Stadtteilzentrum Gries",
+    "identity": "commons;collaborative_economy",
+    "name": "Büro der Nachbarschaften",
+    "opening_hours": "Tu 16:00-19:00; Th 10:00-13:00",
+    "operator": "StadtLABOR Graz",
+    "provides": "community",
+    "source": "Christian Sprung",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 2335069754,
+  "lat": 48.1484138,
+  "lon": 11.5622328,
+  "tags": {
+    "addr:city": "München",
+    "addr:housenumber": "41",
+    "addr:postcode": "80333",
+    "addr:street": "Augustenstraße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "La Belle Epooue",
+    "shop": "second_hand",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 2335070013,
+  "lat": 48.1541561,
+  "lon": 11.5661262,
+  "tags": {
+    "addr:city": "München",
+    "addr:housenumber": "113",
+    "addr:street": "Augustenstraße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "First Place",
+    "shop": "second_hand",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2335083280,
+  "lat": 48.1517765,
+  "lon": 11.5360099,
+  "tags": {
+    "addr:city": "München",
+    "addr:housenumber": "149",
+    "addr:postcode": "80634",
+    "addr:street": "Nymphenburger Straße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Damen Designer Second Hand",
+    "phone": "08954878961",
+    "second_hand": "only",
+    "shop": "clothes",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 2335096266,
+  "lat": 48.1307674,
+  "lon": 11.5697753,
+  "tags": {
+    "addr:city": "München",
+    "addr:housenumber": "31",
+    "addr:postcode": "80469",
+    "addr:street": "Müllerstraße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Carmen's Interieur",
+    "phone": "08926019940",
+    "shop": "second_hand",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 2335312071,
+  "lat": 48.1517154,
+  "lon": 11.5622907,
+  "tags": {
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Flohpalast",
+    "shop": "second_hand",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
   "id": 2338519517,
   "lat": 51.3435572,
   "lon": 9.8574267,
@@ -872,6 +1436,29 @@
     "provides": "food+drink;water;mobility;culture",
     "topic": "participation",
     "website": "http://ttwitzenhausen.de"
+  }
+},
+{
+  "type": "node",
+  "id": 2349995696,
+  "lat": 50.8311712,
+  "lon": 4.3873582,
+  "tags": {
+    "addr:city": "Etterbeek",
+    "addr:housenumber": "24",
+    "addr:postcode": "1040",
+    "addr:street": "Rue de Chambéry - Chambérystraat",
+    "contact:website": "http://www.diepenboomgaard.be/",
+    "description": "Dépot pour les Paniers Den Diepen Boomgaard – ferme biologique située à Grimbergen. Paniers de 1 à 4 personnes, de fruits, légumes ou mixtes + pains, différentes formules d’abonnement",
+    "farm_boxes": "yes",
+    "identity": "solidarity_economy",
+    "interaction": "rebuying_reselling",
+    "name": "Dépôt Boomgaard",
+    "organic": "only",
+    "provides": "food+drink",
+    "ref:UrbIS": "8635991",
+    "regional": "only",
+    "topic": "food+drink"
   }
 },
 {
@@ -923,11 +1510,31 @@
 },
 {
   "type": "node",
+  "id": 2425979531,
+  "lat": 48.1186771,
+  "lon": 11.5418594,
+  "tags": {
+    "addr:city": "München",
+    "addr:housenumber": "34a",
+    "addr:postcode": "81371",
+    "addr:street": "Kidlerstraße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Kinderkram",
+    "phone": "+49 89 72 98 94 48 -11",
+    "shop": "second_hand",
+    "website": "http://www.skf-muenchen.de",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
   "id": 2467830692,
   "lat": 51.3667700,
   "lon": 9.3396573,
   "tags": {
     "addr:city": "Zierenberg",
+    "addr:country": "DE",
     "addr:housenumber": "13",
     "addr:postcode": "34289",
     "addr:street": "Auf dem Dörnberg",
@@ -968,6 +1575,51 @@
     "source": "website",
     "website": "http://www.postgarage-cafe.at",
     "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 2497376900,
+  "lat": 48.1411731,
+  "lon": 11.5846764,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "13",
+    "addr:postcode": "80538",
+    "addr:street": "Seitzstraße",
+    "contact:email": "contact@romysroom.de",
+    "contact:mobile": "+49 177 2077000",
+    "contact:website": "http://www.romysroom.de",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "ROMY´S ROOM exclusiver Kinder Second Hand",
+    "opening_hours": "Tu-Fr 10:30-17:00;Sa 10:00-14:00",
+    "second_hand": "yes",
+    "shop": "clothes"
+  }
+},
+{
+  "type": "node",
+  "id": 2500393619,
+  "lat": 48.1523151,
+  "lon": 11.5770964,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "81",
+    "addr:postcode": "80799",
+    "addr:street": "Türkenstraße",
+    "fair_trade": "yes",
+    "identity": "solidarity_economy;economy_for_the_common_good",
+    "name": "OXFAM",
+    "opening_hours": "Mo-Fr 10:00-19:00;Sa 10:00-15:00",
+    "phone": "+49 89/27 27 32 23",
+    "second_hand": "yes",
+    "shop": "charity",
+    "source": "survey by BenE München",
+    "website": "http://www.oxfam.de/shops/muenchen-maxvorstadt",
+    "wheelchair": "yes"
   }
 },
 {
@@ -1140,6 +1792,21 @@
 },
 {
   "type": "node",
+  "id": 2512537110,
+  "lat": 48.2109671,
+  "lon": 11.3337956,
+  "tags": {
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Olchinger Zwergenland",
+    "phone": "+49 151 56915172",
+    "shop": "second_hand",
+    "website": "http://www.olchinger-zwergenland.de/",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
   "id": 2516558171,
   "lat": 52.3992927,
   "lon": 13.0549258,
@@ -1190,6 +1857,26 @@
 },
 {
   "type": "node",
+  "id": 2727465948,
+  "lat": 48.1601612,
+  "lon": 11.5492583,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "2",
+    "addr:postcode": "80637",
+    "addr:street": "Schwere-Reiter-Straße",
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "Grün in Sicht",
+    "organic": "only",
+    "provides": "food+drink"
+  }
+},
+{
+  "type": "node",
   "id": 2787380196,
   "lat": 45.7758281,
   "lon": 4.8337202,
@@ -1203,6 +1890,21 @@
     "shop": "greengrocer",
     "source": "Grand Lyon - 10/2011",
     "website": "http://www.alter-terre.fr/"
+  }
+},
+{
+  "type": "node",
+  "id": 2845112755,
+  "lat": 48.1383354,
+  "lon": 11.5446435,
+  "tags": {
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "music": "punk",
+    "name": "Black Wave Records",
+    "opening_hours": "Th-Fr 15:00-19:00;Sa 11:00-16:00",
+    "second_hand": "yes",
+    "shop": "music"
   }
 },
 {
@@ -1222,6 +1924,30 @@
     "service:bicycle:second_hand": "yes",
     "shop": "bicycle",
     "website": "http://autourducycle.wordpress.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 2930097695,
+  "lat": 47.0725444,
+  "lon": 15.4395527,
+  "tags": {
+    "addr:city": "Graz",
+    "addr:country": "AT",
+    "addr:housenumber": "3",
+    "addr:postcode": "8010",
+    "addr:street": "Hofgasse",
+    "children": "yes",
+    "contact:email": "graz@goettindesgluecks.at",
+    "contact:phone": "+43 676 4336919",
+    "contact:website": "goettindesgluecks.at",
+    "fair_trade": "yes",
+    "identity": "economy_for_the_common_good",
+    "name": "Göttin des Glücks",
+    "opening_hours": "Mo-Fr 10:30-13:00,13:30-18:00; Sa 10:00-13:00,13:30-17:00",
+    "organic": "yes",
+    "shop": "clothes",
+    "source": "survey"
   }
 },
 {
@@ -1314,37 +2040,6 @@
     "phone": "+33 4 75 55 14 78",
     "website": "http://www.8fablab.fr",
     "workshop": "fablab"
-  }
-},
-{
-  "type": "node",
-  "id": 3148992172,
-  "lat": 47.0784698,
-  "lon": 15.4279563,
-  "tags": {
-    "addr:city": "Graz",
-    "addr:country": "AT",
-    "addr:housenumber": "2",
-    "addr:postcode": "8020",
-    "addr:street": "Grüne Gasse",
-    "contact:email": "office@lendwirbel.at",
-    "end_date": "Oct 2016",
-    "identity": "commons",
-    "indoor": "yes",
-    "interaction": "cousing;diy_and_dit",
-    "mode_of_organisation:self_managed": "yes",
-    "name": "Lendwirbel Büro",
-    "office": "yes",
-    "payment:donations": "yes",
-    "production_input:money:crowdfunding": "yes",
-    "production_input:natural_recources:democratic": "yes",
-    "provides": "culture;spaces;learning_opportunities;community;participation",
-    "smoking": "yes",
-    "smoking:outside": "yes",
-    "source": "survey",
-    "start_date": "Oct 2014",
-    "topic": "culture;community;participation",
-    "website": "http://www.lendwirbel.at"
   }
 },
 {
@@ -1452,126 +2147,6 @@
     "operator": "Lebensmittelretten Graz",
     "provides": "food+drink",
     "website": "https://foodsharing.de/karte"
-  }
-},
-{
-  "type": "node",
-  "id": 3149261095,
-  "lat": 47.0785193,
-  "lon": 15.4280534,
-  "tags": {
-    "addr:city": "Graz",
-    "addr:country": "AT",
-    "addr:housenumber": "2",
-    "addr:postcode": "8020",
-    "addr:street": "Grüne Gasse",
-    "description": "Büro Gemeinschaftsgarten",
-    "diet:vegetarian": "yes",
-    "identity": "transition_initiative",
-    "indoor": "yes",
-    "mode_of_organisation:members": "users",
-    "mode_of_organisation:ownership_structure": "Verein",
-    "mode_of_organisation:purpose": "non_profit",
-    "mode_of_organisation:scale_of_activity": "regional",
-    "mode_of_organisation:self_managed": "yes",
-    "name": "Alles Garten",
-    "operator": "Verein Alles Garten",
-    "payment:donations": "yes",
-    "production_input:knowledge:public_domain": "yes",
-    "production_input:money:crowdfunding": "yes",
-    "production_input:money:gift": "yes",
-    "production_input:natural_recources:democratic": "yes",
-    "production_input:natural_recources:fair": "yes",
-    "production_input:natural_recources:regional": "yes",
-    "production_input:natural_resources:sustainable": "yes",
-    "provides": "spaces;community;participation",
-    "smoking": "no",
-    "smoking:outside": "yes",
-    "start_date": "Oct 2014",
-    "topic": "spaces",
-    "wheelchair": "yes"
-  }
-},
-{
-  "type": "node",
-  "id": 3149261096,
-  "lat": 47.0784846,
-  "lon": 15.4280561,
-  "tags": {
-    "addr:city": "Graz",
-    "addr:country": "AT",
-    "addr:housenumber": "2",
-    "addr:postcode": "8020",
-    "addr:street": "Grüne Gasse",
-    "description": "Vernetzung Grazer Gemeinschaftsgärten - Büro",
-    "diet:vegan": "yes",
-    "diet:vegetarian": "yes",
-    "identity": "transition_initiative",
-    "indoor": "yes",
-    "mode_of_organisation:hierarchy_chef": "flat_hierarchy",
-    "mode_of_organisation:members": "users",
-    "mode_of_organisation:ownership_structure": "Verein",
-    "mode_of_organisation:purpose": "non_profit",
-    "mode_of_organisation:scale_of_activity": "regional",
-    "mode_of_organisation:self_managed": "yes",
-    "name": "Forum Urbanes Gärtnern",
-    "operator": "Verein Forum Urbanes Gärtnern",
-    "payment:donations": "yes",
-    "production_input:knowledge:public_domain": "yes",
-    "production_input:money:crowdfunding": "yes",
-    "production_input:money:gift": "yes",
-    "production_input:natural_recources:democratic": "yes",
-    "production_input:natural_recources:fair": "yes",
-    "production_input:natural_recources:regional": "yes",
-    "production_input:natural_resources:sustainable": "yes",
-    "provides": "culture;spaces;learning_opportunities;community;participation",
-    "smoking": "no",
-    "smoking:outside": "yes",
-    "start_date": "Oct 2014",
-    "topic": "spaces",
-    "wheelchair": "yes"
-  }
-},
-{
-  "type": "node",
-  "id": 3149261097,
-  "lat": 47.0784998,
-  "lon": 15.4280697,
-  "tags": {
-    "access": "yes",
-    "addr:city": "Graz",
-    "addr:country": "AT",
-    "addr:housenumber": "2",
-    "addr:postcode": "8020",
-    "addr:street": "Grüne Gasse",
-    "contact:email": "info@transitiongraz.org",
-    "contact:facebook": "www.facebook.com/transitiongraz",
-    "contact:name": "Verein Transition Graz",
-    "description": "Netzwerken von Transition Initiativen in Graz",
-    "identity": "transition_initiative",
-    "indoor": "yes",
-    "interaction": "cousing;diy_and_dit",
-    "internet_access": "tba",
-    "internet_access:fee": "tba",
-    "mode_of_organisation:decision_making": "by_consensus",
-    "mode_of_organisation:hierarchy_chef": "flat_hierarchy",
-    "mode_of_organisation:members": "users",
-    "mode_of_organisation:ownership_structure": "Verein",
-    "mode_of_organisation:purpose": "non_profit",
-    "mode_of_organisation:scale_of_activity": "regional",
-    "mode_of_organisation:self_managed": "yes",
-    "name": "Transition Graz Büro",
-    "office": "yes",
-    "operator": "Verein Transition Graz",
-    "payment:donations": "yes",
-    "payment:none": "yes",
-    "provides": "spaces;learning_opportunities;community;participation",
-    "smoking": "no",
-    "smoking:outside": "yes",
-    "start_date": "Dec 2014",
-    "topic": "culture;spaces;learning_opportunities;community;participation",
-    "website": "http://transitiongraz.org",
-    "wheelchair": "yes"
   }
 },
 {
@@ -1705,6 +2280,21 @@
 },
 {
   "type": "node",
+  "id": 3184231755,
+  "lat": 48.1578427,
+  "lon": 11.5609160,
+  "tags": {
+    "contact:email": "info@film101.de",
+    "contact:phone": "+498936082212",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Buchhandlung Numéro 45",
+    "second_hand": "yes",
+    "shop": "books"
+  }
+},
+{
+  "type": "node",
   "id": 3185309080,
   "lat": 47.5149655,
   "lon": 19.0485127,
@@ -1732,55 +2322,12 @@
 },
 {
   "type": "node",
-  "id": 3188511029,
-  "lat": 47.0786432,
-  "lon": 15.4278480,
-  "tags": {
-    "addr:city": "Graz",
-    "addr:country": "AT",
-    "addr:housenumber": "2",
-    "addr:postcode": "8020",
-    "addr:street": "Grüne Gasse",
-    "amenity": "fast_food",
-    "contact:email": "mail@nahversorgungs.net",
-    "contact:phone": "+43 660 47 13 469",
-    "description": "Das regionale Bio-Lebensmittel - Netzwerk",
-    "diet:vegan": "yes",
-    "diet:vegetarian": "yes",
-    "end_date": "Oct 2016",
-    "identity": "transition_initiative",
-    "indoor": "yes",
-    "interaction": "rebuying_reselling",
-    "mode_of_organisation:hierarchy_chef": "flat_hierarchy",
-    "mode_of_organisation:purpose": "not_for_private_profit",
-    "mode_of_organisation:scale_of_activity": "regional",
-    "mode_of_organisation:self_managed": "yes",
-    "name": "Naturgenuss Bioladen",
-    "organic": "only",
-    "payment:cash": "yes",
-    "production_input:natural_recources:fair": "yes",
-    "production_input:natural_recources:regional": "yes",
-    "production_input:natural_resources:sustainable": "yes",
-    "production_input:supply_chain:fair": "yes",
-    "provides": "food+drink",
-    "regional": "yes",
-    "shop": "convenience",
-    "source": "survey",
-    "start_date": "Oct 2014",
-    "website": "http://www.naturgenuss.org",
-    "wheelchair": "limited",
-    "wheelchair:description": "eine Stufe, 6cm"
-  }
-},
-{
-  "type": "node",
   "id": 3204538862,
   "lat": 47.0730594,
   "lon": 15.4046317,
   "tags": {
     "addr:city": "Graz",
     "addr:country": "AT",
-    "addr:housenumber": "25",
     "addr:postcode": "8020",
     "addr:street": "Vinzenzgasse",
     "contact:facebook": "https://www.facebook.com/groups/671604246193102/",
@@ -1818,6 +2365,94 @@
     "provides": "objects_of_utility;clothes;knowledge",
     "shop": "convenience",
     "website": "http://kostnixladengratkorn.wordpress.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 3205955824,
+  "lat": 48.1360477,
+  "lon": 11.5830926,
+  "tags": {
+    "addr:city": "München",
+    "addr:housenumber": "28",
+    "addr:postcode": "80539",
+    "addr:street": "Herrnstraße",
+    "contact:email": "info@gutenbiken.com",
+    "identity": "degrowth",
+    "image": "http://gutenbiken.com/images/guten-storefront.jpg",
+    "interaction": "rebuying_reselling",
+    "name": "Guten Biken",
+    "phone": "089 / 24 21 28 94",
+    "service:bicycle:rental": "yes",
+    "service:bicycle:repair": "yes",
+    "service:bicycle:retail": "yes",
+    "service:bicycle:second_hand": "yes",
+    "shop": "bicycle",
+    "website": "http://gutenbiken.com"
+  }
+},
+{
+  "type": "node",
+  "id": 3313351996,
+  "lat": 45.5268649,
+  "lon": -73.5800498,
+  "tags": {
+    "addr:city": "Montréal",
+    "addr:country": "CA",
+    "addr:housenumber": "938",
+    "addr:postcode": "H2J 1X2",
+    "addr:province": "QC",
+    "addr:street": "Avenue du Mont-Royal Est",
+    "addr:suburb": "Le Plateau-Mont-Royal",
+    "amenity": "coworking_space",
+    "email": "info@ecto.coop",
+    "identity": "solidarity_economy",
+    "interaction": "cousing",
+    "level": "2",
+    "name": "Ecto",
+    "opening_hours": "Mo-Fr 09:00-17:00",
+    "phone": "+1-514-564-8636",
+    "provides": "objects_of_utility",
+    "topic": "learning_opportunities",
+    "website": "http://www.ecto.coop/"
+  }
+},
+{
+  "type": "node",
+  "id": 3352563782,
+  "lat": 48.0888477,
+  "lon": 11.5599815,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "46",
+    "addr:postcode": "81545",
+    "addr:street": "Seybothstraße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "First Class Second Hand",
+    "phone": "+49 89 6426655",
+    "second_hand": "only",
+    "shop": "clothes"
+  }
+},
+{
+  "type": "node",
+  "id": 3354481304,
+  "lat": 48.1360642,
+  "lon": 11.5683556,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "1",
+    "addr:postcode": "80331",
+    "addr:street": "Kreuzstraße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Carl Roeckl Nachf.",
+    "second_hand": "yes",
+    "shop": "art",
+    "source": "survey"
   }
 },
 {
@@ -1947,6 +2582,84 @@
 },
 {
   "type": "node",
+  "id": 3366768293,
+  "lat": 48.1600276,
+  "lon": 11.5633914,
+  "tags": {
+    "amenity": "public_bookcase",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "opening_hours": "24/7",
+    "operator": "Offene Bücherschränke Schwabing-West e.V.",
+    "website": "http://www.schwabinger-buecherschrank.de/"
+  }
+},
+{
+  "type": "node",
+  "id": 3374441367,
+  "lat": 48.1516671,
+  "lon": 11.5619824,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "81",
+    "addr:postcode": "80333",
+    "addr:street": "Theresienstraße",
+    "email": "info@flohpalast.de",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Flohpalast",
+    "opening_hours": "Mo-Fr 11:00-19:00;Sa 11:00-17:00",
+    "operator": "FLOHPALAST UG",
+    "phone": "+49 89 21892000",
+    "shop": "second_hand",
+    "website": "http://www.flohpalast.de/"
+  }
+},
+{
+  "type": "node",
+  "id": 3374441369,
+  "lat": 48.1517601,
+  "lon": 11.5613326,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "87",
+    "addr:postcode": "80333",
+    "addr:street": "Theresienstraße",
+    "contact:fax": "+49 89 95477493",
+    "contact:mobile": "+49 176 31327566",
+    "contact:phone": "+49 89 89 95477491",
+    "contact:website": "http://www.second-bike-sports.de",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Second Bike & Sports",
+    "opening_hours": "Mo-Fr 12:00-19:00, Tu-Fr 11:00-19:00;Sa 11:00-15:00",
+    "second_hand": "yes",
+    "shop": "bicycle"
+  }
+},
+{
+  "type": "node",
+  "id": 3381880806,
+  "lat": 48.2154866,
+  "lon": 11.5302490,
+  "tags": {
+    "addr:city": "München",
+    "addr:housenumber": "58",
+    "addr:postcode": "80995",
+    "addr:street": "Josef-Frankl-Straße",
+    "fair_trade": "only",
+    "identity": "collaborative_economy",
+    "interaction": "buying_and_selling",
+    "name": "Weltladen Feldmoching",
+    "opening_hours": "Tu-Sa 09:00-12:30;Tu,Th,Fr 15:00-18:00",
+    "shop": "yes",
+    "website": "http://weltladen-feldmoching.de"
+  }
+},
+{
+  "type": "node",
   "id": 3382996791,
   "lat": 51.3411913,
   "lon": 9.8663388,
@@ -1962,6 +2675,27 @@
     "provides": "land",
     "topic": "land;culture;food+drink",
     "website": "http://ttwitzenhausen.de"
+  }
+},
+{
+  "type": "node",
+  "id": 3388258753,
+  "lat": 48.1392459,
+  "lon": 11.5339054,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "6",
+    "addr:postcode": "80339",
+    "addr:street": "Trappentreustraße",
+    "contact:mobile": "+49 176 78399343",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Bonbon",
+    "opening_hours": "Mo-Fr 13:00-19:00",
+    "second_hand": "yes",
+    "shop": "boutique",
+    "wheelchair": "yes"
   }
 },
 {
@@ -2026,6 +2760,25 @@
     "service": "bicycle",
     "shop": "furniture",
     "topic": "learning_opportunities"
+  }
+},
+{
+  "type": "node",
+  "id": 3464991034,
+  "lat": 48.2531388,
+  "lon": 11.6247636,
+  "tags": {
+    "addr:city": "Garching bei München",
+    "addr:housenumber": "13",
+    "addr:postcode": "85748",
+    "addr:street": "Dieselstraße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "ComputerOutlet24",
+    "operator": "EURATECH GmbH",
+    "second_hand": "yes",
+    "shop": "computer",
+    "source": "survey"
   }
 },
 {
@@ -2197,6 +2950,7 @@
   "lon": 11.9779756,
   "tags": {
     "addr:city": "Halle (Saale)",
+    "addr:country": "DE",
     "addr:housenumber": "1",
     "addr:postcode": "06110",
     "addr:street": "Franckestraße",
@@ -2220,16 +2974,19 @@
     "addr:housenumber": "20",
     "addr:postcode": "8020",
     "addr:street": "Kernstockgasse",
-    "contact:email": "nachbarschaften@mur.at",
+    "contact:email": "post@allerleihladen.at",
     "contact:facebook": "https://www.facebook.com/allerleihladen",
     "contact:phone": "+43 676 4068816",
+    "description": "Im AllerLEIHLaden kannst du Gegenstände (Werkzeug, Haushalt, Spiele, Outdoorsachen, Kurioses ...) kostenlos leihen!",
     "fee": "no",
     "identity": "demonetized_economy",
     "interaction": "lending",
     "name": "AllerLEIHLaden",
     "opening_hours": "Tu,We 14:00-18:00; Th 10:00-14:00",
+    "operator": "AllerLEIHLaden Graz",
+    "phone": "+436764068816",
     "provides": "objects_of_utility",
-    "shop": "hardware",
+    "shop": "supermarket",
     "source": "facebook",
     "start_date": "2.5.2015",
     "website": "http://www.allerleihladen.at",
@@ -2381,14 +3138,14 @@
 {
   "type": "node",
   "id": 3523163011,
-  "lat": 47.0828136,
-  "lon": 15.4325610,
+  "lat": 47.0802136,
+  "lon": 15.4418361,
   "tags": {
     "addr:city": "Graz",
     "addr:country": "AT",
-    "addr:housenumber": "49",
+    "addr:housenumber": "2",
     "addr:postcode": "8010",
-    "addr:street": "Theodor-Körner-Straße",
+    "addr:street": "Wastlergasse",
     "club": "foodcoop",
     "commons": "food+drink",
     "contact:email": "foodkoop.graz@gmail.com",
@@ -2397,7 +3154,7 @@
     "identity": "commons",
     "indoor": "yes",
     "interaction": "buying_and_selling",
-    "name": "Foodcoop Krautkoopf",
+    "name": "Foodkoop KrautKOOPf",
     "organic": "yes",
     "provides": "food+drink",
     "regional": "yes",
@@ -2471,7 +3228,9 @@
     "identity": "transition_initiative;demonetized_economy",
     "interaction": "gifting",
     "name": "Umsonstladen",
-    "provides": "objects_of_utility;clothes"
+    "payment:none": "yes",
+    "provides": "objects_of_utility;clothes",
+    "shop": "yes"
   }
 },
 {
@@ -2485,27 +3244,6 @@
     "name": "Transition Town Schaugarten",
     "organic": "only",
     "provides": "food+drink;participation;community"
-  }
-},
-{
-  "type": "node",
-  "id": 3571437393,
-  "lat": 51.2960498,
-  "lon": 9.5358644,
-  "tags": {
-    "addr:city": "Kassel",
-    "addr:housenumber": "23",
-    "addr:postcode": "34123",
-    "addr:street": "Steinigkstraße",
-    "contact:email": "yes",
-    "contact:website": "yes",
-    "description": "urban garden, community garden, 7000qm, Permaculture Forest Garden",
-    "identity": "commons",
-    "interaction": "sharing",
-    "name": "ForstFeldGarten",
-    "organic": "yes",
-    "topic": "land",
-    "wheelchair": "yes"
   }
 },
 {
@@ -2618,15 +3356,16 @@
     "addr:housenumber": "108",
     "addr:postcode": "3584CE",
     "addr:street": "Cambridgelaan",
-    "amenity": "cafe",
     "cuisine": "regional;international",
     "identity": "economy_for_the_common_good",
     "interaction": "buying_and_selling",
     "internet_access": "yes",
     "name": "De Daktuin",
-    "opening_hours": "Su-We:11:00 - 19:00; Th-Sa:11:00 - 21:00",
+    "note": "cafe [not in 2016]",
+    "opening_hours": "Su-We 11:00-20:00; Th-Sa 11:00-21:00",
     "provides": "food+drink;culture;spaces;community",
-    "smoking": "outside"
+    "smoking": "outside",
+    "website": "http://www.dedaktuinutrecht.nl/"
   }
 },
 {
@@ -2647,6 +3386,23 @@
 },
 {
   "type": "node",
+  "id": 3605099254,
+  "lat": 48.1015876,
+  "lon": 11.5303139,
+  "tags": {
+    "addr:housenumber": "7",
+    "addr:street": "Hofmannstraße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "kommbar Second-Hand-Einrichtungshaus",
+    "phone": "+49 89 62009598",
+    "second_hand": "yes",
+    "shop": "furniture",
+    "website": "http://www.kommbar.de"
+  }
+},
+{
+  "type": "node",
   "id": 3605406087,
   "lat": 51.3436844,
   "lon": 9.8582916,
@@ -2655,10 +3411,51 @@
     "addr:postcode": "37213",
     "addr:street": "Stubenstraße",
     "description": "Gemeinschafts- und Internationalegarten in Anbau",
+    "garden:type": "community",
     "identity": "transition_initiative;permaculture;commons",
     "interaction": "diy_and_dit;cousing",
+    "leisure": "garden",
     "name": "Stubengarten",
     "provides": "land;food+drink;culture"
+  }
+},
+{
+  "type": "node",
+  "id": 3623322465,
+  "lat": 48.1260300,
+  "lon": 11.5785374,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "6",
+    "addr:postcode": "81541",
+    "addr:street": "Ohlmüllerstraße",
+    "email": "secondhaifi@aol.com",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Second Hai-Fi",
+    "opening_hours": "Tu-Fr 12:00-19:00; Sa 10:00-15:00",
+    "phone": "+49 89 65308053",
+    "shop": "second_hand",
+    "website": "http://www.second-hai-fi.de",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 3626905156,
+  "lat": 48.1592653,
+  "lon": 11.5494131,
+  "tags": {
+    "addr:housenumber": "114",
+    "addr:street": "Dachauer Straße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "BrauchBar Kostenlosladen",
+    "opening_hours": "Mo 17:00-18:00;Th 19:00-20:00;Sa 14:00-16:00",
+    "payment:none": "yes",
+    "shop": "second_hand",
+    "website": "https://www.facebook.com/pages/BrauchBar-Kostenlosladen-in-M%C3%BCnchen/339838759524294?_fb_noscript=1"
   }
 },
 {
@@ -2695,6 +3492,45 @@
     "identity": "commons",
     "name": "Open Knowledge Foundation Deutschland",
     "topic": "culture;spaces;learning_opportunities;community;participation"
+  }
+},
+{
+  "type": "node",
+  "id": 3678480393,
+  "lat": 48.2786773,
+  "lon": 11.5652800,
+  "tags": {
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "AWO Klawotte",
+    "note": "Auch Spielzeug",
+    "opening_hours": "Tu, Th 09:00-13:00;Fr 13:00-17:00;Sa[3] 09:00-13:00",
+    "second_hand": "yes",
+    "shop": "clothes"
+  }
+},
+{
+  "type": "node",
+  "id": 3681386644,
+  "lat": 48.0665252,
+  "lon": 11.6100222,
+  "tags": {
+    "addr:city": "Unterhaching",
+    "addr:housenumber": "12",
+    "addr:postcode": "82008",
+    "addr:street": "Hofmarkweg",
+    "amenity": "cafe",
+    "cuisine": "regional",
+    "description": "Gemeinnütziger Verein mit dem Ziel, in Unterhaching den Agenda 21- Gedanken zu stärken und das bürgerschaftliche Engagement zu fördern.",
+    "fair_trade": "yes",
+    "identity": "collaborative_economy",
+    "name": "Unterhachinger Treffpunkt",
+    "opening_hours": "Mo 09:30-12:30;Tu-Fr 09:30-12:30,14:30-18:00;SH Tu,Th 10:00-12:00,15:00-18:00;SH Mo,We,Fr off;PH off",
+    "organic": "yes",
+    "phone": "+49 89/44239809",
+    "shop": "yes",
+    "website": "http://www.agenda21-unterhaching.de/treffpunkt.htm",
+    "wheelchair": "yes"
   }
 },
 {
@@ -2802,6 +3638,22 @@
 },
 {
   "type": "node",
+  "id": 3719993225,
+  "lat": 48.1035905,
+  "lon": 11.4206337,
+  "tags": {
+    "clothes": "children",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Die kleine Fee",
+    "opening_hours": "Mo,Tu,Th,Fr 09:30-12:30, We 09:30-12:30;15:00-17:30;Sa 10:00-12:00;PH off",
+    "second_hand": "yes",
+    "shop": "clothes",
+    "website": "http://www.kleine-fee.de/"
+  }
+},
+{
+  "type": "node",
   "id": 3721131723,
   "lat": 51.6741413,
   "lon": 11.7776126,
@@ -2842,6 +3694,7 @@
   "lon": 11.9922209,
   "tags": {
     "addr:city": "Halle (Saale)",
+    "addr:country": "DE",
     "addr:housenumber": "16",
     "addr:postcode": "06112",
     "addr:street": "Landsberger Straße",
@@ -2912,6 +3765,18 @@
 },
 {
   "type": "node",
+  "id": 3748592130,
+  "lat": 48.2048425,
+  "lon": 11.5718109,
+  "tags": {
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "second_hand": "yes",
+    "shop": "clothes"
+  }
+},
+{
+  "type": "node",
   "id": 3749007091,
   "lat": 52.3894383,
   "lon": 13.0767306,
@@ -2929,6 +3794,23 @@
     "leisure": "garden",
     "name": "freiGarten Potsdam",
     "provides": "learning_opportunities"
+  }
+},
+{
+  "type": "node",
+  "id": 3750976961,
+  "lat": 48.1250116,
+  "lon": 11.4434464,
+  "tags": {
+    "contact:phone": "+49 89 18904130",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Schiefes Eck Bergsport",
+    "opening_hours": "Tu 14:00-20:00;We-Fr 10:00-12:00, 14:00-18:00;PH off",
+    "operator": "Rudolf Miehle",
+    "second_hand": "yes",
+    "shop": "sports",
+    "website": "http://www.schiefeseck-bergsport.de/"
   }
 },
 {
@@ -3140,14 +4022,14 @@
 {
   "type": "node",
   "id": 3763638956,
-  "lat": 52.5092862,
-  "lon": 13.4526745,
+  "lat": 52.5206696,
+  "lon": 13.4531190,
   "tags": {
     "addr:city": "Berlin",
     "addr:country": "DE",
-    "addr:housenumber": "59a",
-    "addr:postcode": "10243",
-    "addr:street": "Warschauer Straße",
+    "addr:housenumber": "64",
+    "addr:postcode": "10249",
+    "addr:street": "Mühsamstraße",
     "addr:suburb": "Friedrichshain",
     "contact:email": "info@fahrwerk-berlin.de",
     "contact:phone": "+49 30 40585100",
@@ -3157,6 +4039,7 @@
     "mode_of_organisation:self_managed": "yes",
     "name": "Fahrwerk",
     "office": "company",
+    "opening_hours": "Mo-Fr 07:30-20:00, Sa 12:00-20:00",
     "source": "Solikon 2015",
     "start_date": "2009"
   }
@@ -3558,6 +4441,7 @@
     "identity": "commons",
     "name": "Mundraub",
     "note": "Vereinssitz",
+    "office": "ngo",
     "operator": "Terra Concordia gUG Deutschland",
     "source": "Solikon 2015",
     "topic": "food+drink"
@@ -3789,14 +4673,14 @@
 {
   "type": "node",
   "id": 3763639084,
-  "lat": 52.4751463,
-  "lon": 13.4525297,
+  "lat": 52.4706306,
+  "lon": 13.4425969,
   "tags": {
     "addr:city": "Berlin",
     "addr:country": "DE",
-    "addr:housenumber": "10",
+    "addr:housenumber": "80",
     "addr:postcode": "12055",
-    "addr:street": "Mareschstraße",
+    "addr:street": "Braunschweiger Straße",
     "addr:suburb": "Neukölln",
     "club": "yes",
     "contact:email": "email@trial-error.org",
@@ -3804,11 +4688,12 @@
     "description": "DIY, handicraft, open-source, upcycling",
     "identity": "p2p_economy;demonetized_economy",
     "interaction": "bartering;diy_and_dit",
-    "name": "Trial & Error Kulturlabor",
+    "name": "Kulturlabor Trial & Error e.V.",
+    "office": "ngo",
     "operator": "Kulturlabor Trial&Error e.V.",
     "provides": "food+drink;culture;spaces;learning_opportunities;participation",
-    "source": "Solikon 2015",
-    "website": "http://kulturlabortrialerror.jimdo.com"
+    "source": "Solikon 2015, eV members",
+    "website": "http://www.trial-error.org/"
   }
 },
 {
@@ -4060,6 +4945,18 @@
 },
 {
   "type": "node",
+  "id": 3827495352,
+  "lat": 48.1369254,
+  "lon": 11.5378329,
+  "tags": {
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Gebrauchte Haushaltsgeräte Verkauf",
+    "shop": "second_hand"
+  }
+},
+{
+  "type": "node",
   "id": 3831529258,
   "lat": 50.8376798,
   "lon": 4.3870293,
@@ -4089,6 +4986,7 @@
     "addr:housenumber": "105",
     "addr:postcode": "1040",
     "addr:street": "Rue de la Grande Haie - Grote Haagstraat",
+    "contact:website": "http://rutabagas.broebelair.be/",
     "description": "Groupement d'achat solidaire de l'agriculture paysanne à Etterbeek.",
     "farm_boxes": "yes",
     "identity": "transition_initiative;solidarity_economy",
@@ -4177,6 +5075,137 @@
 },
 {
   "type": "node",
+  "id": 3925808867,
+  "lat": 44.9160141,
+  "lon": 4.2987836,
+  "tags": {
+    "identity": "commons",
+    "name": "Communauté Longo Maï de Treynas",
+    "website": "http://www.prolongomaif.ch/les-cooperatives/treynas/"
+  }
+},
+{
+  "type": "node",
+  "id": 3929290141,
+  "lat": 48.1158477,
+  "lon": 11.5895343,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "8",
+    "addr:postcode": "81541",
+    "addr:street": "Brecherspitzstraße",
+    "contact:fax": "+49 89 30 90 44920",
+    "contact:phone": "+49 8930904490",
+    "contact:website": "http://www.fairkauf-handelskontor.de/",
+    "fair_trade": "only",
+    "identity": "collaborative_economy",
+    "interaction": "buying_and_selling",
+    "name": "Fairkauf Handelskontor eG",
+    "office": "company",
+    "source": "survey by BenE München",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 3929290142,
+  "lat": 48.1311278,
+  "lon": 11.5988612,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "10",
+    "addr:postcode": "81667",
+    "addr:street": "Wörthstraße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "FlohMarktLaden",
+    "shop": "second_hand",
+    "source": "survey by BenE München",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3929290143,
+  "lat": 48.1753420,
+  "lon": 11.5511870,
+  "tags": {
+    "amenity": "marketplace",
+    "children": "designated",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Flohmarkt an der Parkaue",
+    "second_hand": "yes",
+    "source": "survey by BenE München",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3929290144,
+  "lat": 48.1320651,
+  "lon": 11.5480482,
+  "tags": {
+    "amenity": "marketplace",
+    "children": "designated",
+    "fixme": "exact location",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Flohmarkt an der Theresienwiese",
+    "second_hand": "yes",
+    "source": "survey by BenE München",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3929290155,
+  "lat": 48.1132087,
+  "lon": 11.5874594,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "22",
+    "addr:postcode": "81539",
+    "addr:street": "Untersbergstraße",
+    "children": "designated",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Gebrauchtwarenhaus Giesing",
+    "shop": "second_hand",
+    "source": "survey by BenE München",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3929291568,
+  "lat": 48.1516781,
+  "lon": 11.5527660,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "21",
+    "addr:postcode": "80335",
+    "addr:street": "Loristraße",
+    "amenity": "marketplace",
+    "contact:email": "info@muenchner-bauernmaerkte.de",
+    "contact:fax": "+49 89 55873470",
+    "contact:phone": "+49 89 55873450",
+    "contact:website": "www.muenchner-bauernmaerkte.de",
+    "food": "yes",
+    "identity": "solidarity_economy",
+    "interaction": "buying_and_selling",
+    "operator": "Bauernmarkt München e.V.",
+    "provides": "food+drink",
+    "regional": "yes",
+    "source": "survey by BenE München"
+  }
+},
+{
+  "type": "node",
   "id": 3929291569,
   "lat": 48.1466458,
   "lon": 11.5722450,
@@ -4192,12 +5221,78 @@
     "contact:phone": "+49 89 55873450",
     "contact:website": "www.muenchner-bauernmaerkte.de",
     "food": "yes",
-    "identity": "collaborative_economy",
+    "identity": "solidarity_economy",
     "interaction": "buying_and_selling",
     "operator": "Bauernmarkt München e.V.",
     "organic": "limited",
     "provides": "food+drink",
     "regional": "yes",
+    "source": "survey by BenE München"
+  }
+},
+{
+  "type": "node",
+  "id": 3929291579,
+  "lat": 48.1749540,
+  "lon": 11.5246150,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "192",
+    "addr:postcode": "80992",
+    "addr:street": "Dachauer Straße",
+    "contact:email": "sommer@diakonia.de",
+    "contact:phone": "+49 89-12 15 95-0",
+    "contact:website": "http://www.kleidsam-muenchen.de/",
+    "gender": "female",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Kleidsam - Second Hand für Frauerm",
+    "second_hand": "yes",
+    "shop": "clothes",
+    "source": "survey by BenE München",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3929291591,
+  "lat": 48.1353060,
+  "lon": 11.5427260,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "27",
+    "addr:postcode": "80339",
+    "addr:street": "Ligsalzstraße",
+    "contact:website": "http://www.luxusbaba.de/",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Luxusbaba",
+    "second_hand": "yes",
+    "shop": "clothes",
+    "source": "survey by BenE München"
+  }
+},
+{
+  "type": "node",
+  "id": 3929291606,
+  "lat": 48.1377602,
+  "lon": 11.5528918,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "80",
+    "addr:postcode": "80336",
+    "addr:street": "Schwanthalerstraße",
+    "club": "yes",
+    "contact:email": "info@nordsuedforum.de",
+    "contact:fax": "+49 89 85 63 75 25",
+    "contact:phone": "+49 89 85 63 75 23",
+    "contact:website": "http://www.nordsuedforum.de/",
+    "fair_trade": "yes",
+    "identity": "commons",
+    "name": "Nord Süd Forum München e.V.",
     "source": "survey by BenE München"
   }
 },
@@ -4222,6 +5317,66 @@
 },
 {
   "type": "node",
+  "id": 3929291623,
+  "lat": 48.1529527,
+  "lon": 11.5656273,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "104",
+    "addr:postcode": "80798",
+    "addr:street": "Augustenstraße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Second Hand EX DREss und Dirndl",
+    "second_hand": "yes",
+    "shop": "clothes",
+    "source": "survey by BenE München"
+  }
+},
+{
+  "type": "node",
+  "id": 3929291624,
+  "lat": 48.1517999,
+  "lon": 11.5711354,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "68",
+    "addr:postcode": "80799",
+    "addr:street": "Schellingstraße",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Second Hand Zsa Zsa",
+    "shop": "second_hand",
+    "source": "survey by BenE München",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3929291639,
+  "lat": 48.1380399,
+  "lon": 11.5529770,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "80",
+    "addr:postcode": "80336",
+    "addr:street": "Schwanthalerstraße",
+    "contact:email": "geschaeftsstelle@einewelthaus.de",
+    "contact:fax": "+49 8985637512",
+    "contact:phone": "+49 8985637510",
+    "contact:website": "http://www.einewelthaus.de/",
+    "fair_trade": "yes",
+    "identity": "commons",
+    "name": "Trägerkreis EineWeltHaus München e.V.",
+    "office": "ngo",
+    "source": "survey by BenE München"
+  }
+},
+{
+  "type": "node",
   "id": 3929291654,
   "lat": 48.1387982,
   "lon": 11.5417953,
@@ -4242,13 +5397,88 @@
 },
 {
   "type": "node",
+  "id": 3929292576,
+  "lat": 48.0630976,
+  "lon": 11.6792504,
+  "tags": {
+    "addr:city": "Ottobrunn",
+    "addr:country": "DE",
+    "addr:postcode": "85521",
+    "addr:street": "Bahnhofsplatz",
+    "amenity": "marketplace",
+    "contact:email": "info@muenchner-bauernmaerkte.de",
+    "contact:fax": "+49 89 55873470",
+    "contact:phone": "+49 89 55873450",
+    "contact:website": "www.muenchner-bauernmaerkte.de",
+    "food": "yes",
+    "identity": "solidarity_economy",
+    "interaction": "buying_and_selling",
+    "operator": "Bauernmarkt München e.V.",
+    "organic": "limited",
+    "provides": "food+drink",
+    "regional": "yes",
+    "source": "survey by BenE München"
+  }
+},
+{
+  "type": "node",
+  "id": 3929292577,
+  "lat": 48.0977624,
+  "lon": 11.5816031,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:postcode": "81547",
+    "addr:street": "Mangfallplatz",
+    "amenity": "marketplace",
+    "contact:email": "info@muenchner-bauernmaerkte.de",
+    "contact:fax": "+49 89 55873470",
+    "contact:phone": "+49 89 55873450",
+    "contact:website": "www.muenchner-bauernmaerkte.de",
+    "food": "yes",
+    "identity": "solidarity_economy",
+    "interaction": "buying_and_selling",
+    "operator": "Bauernmarkt München e.V.",
+    "organic": "limited",
+    "provides": "food+drink",
+    "regional": "yes",
+    "source": "survey by BenE München"
+  }
+},
+{
+  "type": "node",
+  "id": 3929292578,
+  "lat": 48.1401439,
+  "lon": 11.5873714,
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:postcode": "80538",
+    "addr:street": "St.-Anna-Platz",
+    "amenity": "marketplace",
+    "contact:email": "info@muenchner-bauernmaerkte.de",
+    "contact:fax": "+49 89 55873470",
+    "contact:phone": "+49 89 55873450",
+    "contact:website": "www.muenchner-bauernmaerkte.de",
+    "food": "yes",
+    "identity": "solidarity_economy",
+    "interaction": "buying_and_selling",
+    "operator": "Bauernmarkt München e.V.",
+    "organic": "limited",
+    "provides": "food+drink",
+    "regional": "yes",
+    "source": "survey by BenE München"
+  }
+},
+{
+  "type": "node",
   "id": 3929292582,
   "lat": 48.1536321,
   "lon": 11.5682081,
   "tags": {
     "addr:city": "München",
     "addr:country": "DE",
-    "addr:postcode": "80799",
+    "addr:postcode": "80798",
     "addr:street": "Zieblandstraße",
     "amenity": "marketplace",
     "contact:email": "info@muenchner-bauernmaerkte.de",
@@ -4256,7 +5486,28 @@
     "contact:phone": "+49 89 55873450",
     "contact:website": "www.muenchner-bauernmaerkte.de",
     "food": "yes",
-    "identity": "collaborative_economy",
+    "identity": "solidarity_economy",
+    "interaction": "buying_and_selling",
+    "operator": "Bauernmarkt München e.V.",
+    "organic": "limited",
+    "provides": "food+drink",
+    "regional": "yes",
+    "source": "survey by BenE München"
+  }
+},
+{
+  "type": "node",
+  "id": 3929292583,
+  "lat": 48.1630445,
+  "lon": 11.4489742,
+  "tags": {
+    "amenity": "marketplace",
+    "contact:email": "info@muenchner-bauernmaerkte.de",
+    "contact:fax": "+49 89 55873470",
+    "contact:phone": "+49 89 55873450",
+    "contact:website": "www.muenchner-bauernmaerkte.de",
+    "food": "yes",
+    "identity": "solidarity_economy",
     "interaction": "buying_and_selling",
     "operator": "Bauernmarkt München e.V.",
     "organic": "limited",
@@ -4281,7 +5532,7 @@
     "contact:phone": "+49 89 55873450",
     "contact:website": "www.muenchner-bauernmaerkte.de",
     "food": "yes",
-    "identity": "collaborative_economy",
+    "identity": "solidarity_economy",
     "interaction": "buying_and_selling",
     "operator": "Bauernmarkt München e.V.",
     "organic": "limited",
@@ -4362,6 +5613,615 @@
     "name": "Elävä maa luomupiiri / food circle",
     "provides": "food+drink;community;participation"
   }
+},
+{
+  "type": "node",
+  "id": 3963763561,
+  "lat": 48.1259069,
+  "lon": 11.5838293,
+  "tags": {
+    "amenity": "marketplace",
+    "identity": "solidarity_economy",
+    "interaction": "buying_and_selling",
+    "organic": "limited",
+    "provides": "food+drink",
+    "regional": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3963783389,
+  "lat": 48.1328261,
+  "lon": 11.6916672,
+  "tags": {
+    "amenity": "marketplace",
+    "identity": "solidarity_economy",
+    "interaction": "buying_and_selling",
+    "opening_hours": "Fr. 10:00-17:00",
+    "organic": "limited",
+    "provides": "food+drink",
+    "regional": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3964334914,
+  "lat": 48.1176324,
+  "lon": 11.5399015,
+  "tags": {
+    "addr:city": "München",
+    "addr:housenumber": "42",
+    "addr:postcode": "81369",
+    "addr:street": "Plinganserstraße",
+    "identity": "permaculture",
+    "interaction": "buying_and_selling",
+    "name": "EMIKO",
+    "provides": "objects_of_utility",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "node",
+  "id": 3964427826,
+  "lat": 48.1647282,
+  "lon": 11.5585926,
+  "tags": {
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "Stadt Acker",
+    "organic": "only",
+    "provides": "food+drink"
+  }
+},
+{
+  "type": "node",
+  "id": 3964472593,
+  "lat": 48.1592314,
+  "lon": 11.5117997,
+  "tags": {
+    "addr:city": "München",
+    "addr:housenumber": "16",
+    "addr:postcode": "80638",
+    "addr:street": "Menzinger Straße",
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "Gartentreffpunkt",
+    "operator": "Gemeinschaftszentrum Integriertes Wohnen (IWO)"
+  }
+},
+{
+  "type": "node",
+  "id": 3964488765,
+  "lat": 48.1594157,
+  "lon": 11.5297866,
+  "tags": {
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "Gärten der Kulturen",
+    "organic": "only",
+    "provides": "food+drink"
+  }
+},
+{
+  "type": "node",
+  "id": 3964766650,
+  "lat": 48.1530243,
+  "lon": 11.6350365,
+  "tags": {
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "Wabengarten ÖBZ",
+    "organic": "only",
+    "provides": "food+drink"
+  }
+},
+{
+  "type": "node",
+  "id": 3964766651,
+  "lat": 48.1531460,
+  "lon": 11.6341889,
+  "tags": {
+    "garden:type": "community",
+    "identity": "permaculture",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "Experimentiergarten NawaRo",
+    "organic": "only",
+    "provides": "energy"
+  }
+},
+{
+  "type": "node",
+  "id": 3964776014,
+  "lat": 48.1529349,
+  "lon": 11.6353047,
+  "tags": {
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "Interkultureller Frauengarten ÖBZ",
+    "organic": "only",
+    "provides": "food+drink"
+  }
+},
+{
+  "type": "node",
+  "id": 3964792258,
+  "lat": 48.1226167,
+  "lon": 11.7039102,
+  "tags": {
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "Krautgarten",
+    "organic": "only",
+    "provides": "food+drink"
+  }
+},
+{
+  "type": "node",
+  "id": 3964807233,
+  "lat": 48.1254187,
+  "lon": 11.6145404,
+  "tags": {
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "bewohnergarten",
+    "organic": "only",
+    "provides": "food+drink"
+  }
+},
+{
+  "type": "node",
+  "id": 3964810758,
+  "lat": 48.1232071,
+  "lon": 11.6084716,
+  "tags": {
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "Kulturgarten",
+    "operator": "WERKBOX 3",
+    "organic": "only",
+    "provides": "food+drink"
+  }
+},
+{
+  "type": "node",
+  "id": 3964826442,
+  "lat": 48.1234941,
+  "lon": 11.5529117,
+  "tags": {
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "Südgarten",
+    "organic": "only",
+    "provides": "food+drink"
+  }
+},
+{
+  "type": "node",
+  "id": 3964832970,
+  "lat": 48.1304320,
+  "lon": 11.5399210,
+  "tags": {
+    "addr:city": "München",
+    "addr:housenumber": "41",
+    "addr:postcode": "80339",
+    "addr:street": "Ganghoferstraße",
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "Interkultureller Garten IG-Feuerwache",
+    "operator": "Initiativgruppe",
+    "organic": "only",
+    "provides": "food+drink",
+    "source": "http://www.initiativgruppe.de/"
+  }
+},
+{
+  "type": "node",
+  "id": 3964843353,
+  "lat": 48.1279219,
+  "lon": 11.4762993,
+  "tags": {
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "Interkultureller Garten",
+    "organic": "only",
+    "provides": "food+drink"
+  }
+},
+{
+  "type": "node",
+  "id": 3964857633,
+  "lat": 48.1336570,
+  "lon": 11.4609848,
+  "tags": {
+    "addr:city": "München",
+    "addr:housenumber": "12",
+    "addr:postcode": "81241",
+    "addr:street": "Schlagweg",
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "Bienengarten Pasing",
+    "organic": "only",
+    "provides": "food+drink"
+  }
+},
+{
+  "type": "node",
+  "id": 3964865826,
+  "lat": 48.1519394,
+  "lon": 11.4285051,
+  "tags": {
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "Treffpunkt Garten",
+    "organic": "only",
+    "provides": "food+drink",
+    "source": "http://www.sos-kinderdorf.de/familien-und-kindertageszentrum-neuaubing"
+  }
+},
+{
+  "type": "node",
+  "id": 3964871234,
+  "lat": 48.1134218,
+  "lon": 11.5769865,
+  "tags": {
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "Giesinger Grünspitz",
+    "organic": "only",
+    "provides": "food+drink"
+  }
+},
+{
+  "type": "node",
+  "id": 3964877597,
+  "lat": 48.1129985,
+  "lon": 11.6150688,
+  "tags": {
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "Rosen_heim",
+    "organic": "only",
+    "provides": "food+drink"
+  }
+},
+{
+  "type": "node",
+  "id": 3964882772,
+  "lat": 48.0954515,
+  "lon": 11.6626496,
+  "tags": {
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "Bewohnergarten ZAK",
+    "organic": "only",
+    "provides": "food+drink"
+  }
+},
+{
+  "type": "node",
+  "id": 3999210408,
+  "lat": 52.4831518,
+  "lon": 13.3529440,
+  "tags": {
+    "fee": "no",
+    "fridge": "yes",
+    "identity": "demonetized_economy;commons",
+    "interaction": "bartering",
+    "name": "Fairteiler",
+    "operator": "foodsharing",
+    "provides": "food+drink"
+  }
+},
+{
+  "type": "node",
+  "id": 3999222855,
+  "lat": 52.5021840,
+  "lon": 13.4313668,
+  "tags": {
+    "fridge": "yes",
+    "identity": "commons",
+    "indoor": "yes",
+    "interaction": "bartering",
+    "name": "Fairteiler",
+    "provides": "food+drink"
+  }
+},
+{
+  "type": "node",
+  "id": 4007150633,
+  "lat": 50.8317869,
+  "lon": 4.3919976,
+  "tags": {
+    "addr:city": "Etterbeek - Etterbeek",
+    "addr:housenumber": "34",
+    "addr:postcode": "1040",
+    "addr:street": "Rue des Moissonneurs - Maaiersstraat",
+    "contact:website": "http://www.agricovert.be",
+    "description": "Dépôt à Etterbeek de la coopérative Agricovert",
+    "farm_boxes": "yes",
+    "identity": "solidarity_economy",
+    "interaction": "rebuying_reselling",
+    "name": "Dépôt Agricovert",
+    "organic": "only",
+    "provides": "food+drink",
+    "regional": "only"
+  }
+},
+{
+  "type": "node",
+  "id": 4008500249,
+  "lat": 51.3438426,
+  "lon": 9.8589394,
+  "tags": {
+    "amenity": "bar",
+    "club": "yes",
+    "identity": "commons",
+    "interaction": "cousing",
+    "mode_of_organisation:self_managed": "yes",
+    "name": "Internationaler StudentInnen-Club Witzenhausen",
+    "provides": "culture",
+    "smoking": "yes",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 4034138645,
+  "lat": 52.5003909,
+  "lon": 13.4221612,
+  "tags": {
+    "addr:city": "Berlin",
+    "addr:country": "DE",
+    "addr:housename": "SO36",
+    "addr:housenumber": "190",
+    "addr:postcode": "10999",
+    "addr:street": "Oranienstraße",
+    "addr:suburb": "Kreuzberg",
+    "amenity": "nightclub",
+    "contact:email": "post@so36.de",
+    "contact:facebook": "http://www.facebook.com/pages/_/171604075171",
+    "contact:google_plus": "https://plus.google.com/u/0/113966892973134215750",
+    "contact:phone": "+49 30 61401306",
+    "contact:website": "http://so36.de",
+    "contact:yelp": "http://www.yelp.com/biz/so36-berlin",
+    "description": "concert collective;concert venue;events",
+    "identity": "solidarity_economy",
+    "link:qype": "http://www.qype.com/place/3091",
+    "link:unlike": "http://unlike.net/berlin/after-dark/so36",
+    "name": "SO36",
+    "provides": "culture;spaces",
+    "smoking": "isolated",
+    "source": "Solikon 2015",
+    "toilets:wheelchair": "yes",
+    "wheelchair": "yes",
+    "wheelchair:description": "Rampe am Eingang wird auf Nachfrage hingelegt; Drinnen: Rollstuh auf ein Podest heben zum Konzert schauen",
+    "wikipedia": "de:SO36"
+  }
+},
+{
+  "type": "node",
+  "id": 4049844543,
+  "lat": 60.1778279,
+  "lon": 24.9245372,
+  "tags": {
+    "addr:city": "Helsinki",
+    "addr:housenumber": "2 b",
+    "addr:postcode": "00260",
+    "addr:street": "Töölöntorinkatu",
+    "description": "Eettisen kaupan puolesta ry edistää oikeudenmukaista maailmankauppaa, kestäviä tuotantotapoja ja vastuullista kuluttamista.",
+    "identity": "transition_initiative",
+    "interaction": "diy_and_dit",
+    "name": "Eettisen kaupan puolesta ry",
+    "topic": "learning_opportunities;community;participation"
+  }
+},
+{
+  "type": "node",
+  "id": 4068546233,
+  "lat": 49.4485631,
+  "lon": 11.0790454,
+  "tags": {
+    "access": "public",
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "64",
+    "addr:postcode": "90402",
+    "addr:street": "Königstraße",
+    "contact:email": "info@bluepingu.de",
+    "contact:facebook": "https://www.facebook.com/BluepinguFranken",
+    "contact:fax": "+49 911 6695821",
+    "contact:name": "Frank Braun",
+    "contact:phone": "+49 911 2346 372",
+    "contact:twitter": "https://twitter.com/Bluepingu",
+    "contact:website": "http://bluepingu.de",
+    "identity": "solidarity_economy;transition_initiative;permaculture;commons;economy_for_the_common_good;collaborative_economy",
+    "indoor": "yes",
+    "interaction": "bartering;sharing;lending;renting;gifting;rebuying_reselling;cousing;diy_and_dit;buying_and_selling",
+    "level": "5",
+    "name": "Bluepingu eV",
+    "office": "association",
+    "provides": "water;community",
+    "start_date": "2008",
+    "topic": "food+drink;water;mobility;health;culture;objects_of_utility;community;participation",
+    "topic:land": "urban",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 4073325171,
+  "lat": 60.1728054,
+  "lon": 24.9471295,
+  "tags": {
+    "addr:city": "Helsinki",
+    "addr:housenumber": "22",
+    "addr:postcode": "00100",
+    "addr:street": "Vuorikatu",
+    "description": "Vaatelainaamo, josta voi lainata kotimaista muotia.",
+    "identity": "degrowth",
+    "name": "Vaatelainaamo Vaaterekki",
+    "provides": "clothes",
+    "shop": "clothes"
+  }
+},
+{
+  "type": "node",
+  "id": 4073329175,
+  "lat": 60.1640433,
+  "lon": 25.0837773,
+  "tags": {
+    "addr:city": "Helsinki",
+    "addr:housenumber": "54 D 1",
+    "addr:postcode": "00850",
+    "addr:street": "Jollaksentie",
+    "description": "Ehta Raha on yhteishyvän talouden työkalu. Se on joukkorahoitusta, jossa ekologisten, sosiaalisten ja kulttuurihankkeiden rahoitusta tarvitsevat tekijät löytävät rahoittajia.",
+    "identity": "solidarity_economy;economy_for_the_common_good;collaborative_economy",
+    "name": "Osuuskunta Ehta Raha",
+    "provides": "learning_opportunities;community;participation"
+  }
+},
+{
+  "type": "node",
+  "id": 4073385751,
+  "lat": 61.4790216,
+  "lon": 23.9123493,
+  "tags": {
+    "addr:city": "Tampere",
+    "addr:housenumber": "41",
+    "addr:postcode": "33730",
+    "addr:street": "Kauppilaisenkatu",
+    "description": "Työ- ja asuinyhteisö, joka irrottautuu rikki menneestä yhteiskunnasta ja tekee itse uutta sosiaalisuutta.",
+    "identity": "solidarity_economy;transition_initiative",
+    "name": "Uusiruukki",
+    "provides": "housing;community;participation"
+  }
+},
+{
+  "type": "node",
+  "id": 4081141226,
+  "lat": 49.5514088,
+  "lon": 25.5978692,
+  "tags": {
+    "amenity": "public_bookcase",
+    "brand": "Bookcrossing",
+    "description": "Прочитав сам — передай іншому.",
+    "identity": "commons",
+    "interaction": "bartering;lending;gifting",
+    "level": "2",
+    "opening_hours": "Mo-Sa 10:30-22:30; Su 12:00-22:30",
+    "operator": "Coffe Brand",
+    "provides": "learning_opportunities"
+  }
+},
+{
+  "type": "node",
+  "id": 4305557618,
+  "lat": 52.3199559,
+  "lon": 13.6353962,
+  "tags": {
+    "addr:city": "Wildau",
+    "addr:housenumber": "114",
+    "addr:postcode": "15745",
+    "addr:street": "Karl-Marx-Straße",
+    "contact:website": "https://foodassembly.de/de/assemblies/7871",
+    "description": "Food Assembly Wildau (Erzeuger-Verbraucher-Gemeinschaft) mit dem Abholstandort im Familienladen \"Seifenblase\", Karl-Marx-Straße 114 (am S-Bhf. Wildau).",
+    "identity": "collaborative_economy",
+    "interaction": "buying_and_selling",
+    "name": "Food Assembly Wildau",
+    "organic": "yes",
+    "provides": "food+drink;culture;community",
+    "regional": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4343400689,
+  "lat": 18.9830148,
+  "lon": -99.0899271,
+  "tags": {
+    "addr:city": "Tepoztlan",
+    "addr:street": "Prolongación Revolucion",
+    "contact:email": "claudia.sakbe@gmail.com",
+    "contact:fax": "no",
+    "contact:name": "Claudia",
+    "contact:phone": "yes",
+    "contact:website": "no",
+    "description": "Comunidad de aprendizaje auto-dirigida para ninos",
+    "identity": "commons",
+    "interaction": "bartering;gifting;diy_and_dit",
+    "name": "Libres y Jugando",
+    "provides": "community;culture;learning_opportunities",
+    "topic": "learning_opportunities;community"
+  }
+},
+{
+  "type": "node",
+  "id": 179916815,
+  "lat": 60.1842937,
+  "lon": 24.9619171
+},
+{
+  "type": "node",
+  "id": 179916817,
+  "lat": 60.1841659,
+  "lon": 24.9623098
+},
+{
+  "type": "node",
+  "id": 179916819,
+  "lat": 60.1842955,
+  "lon": 24.9624801
+},
+{
+  "type": "node",
+  "id": 179916820,
+  "lat": 60.1841943,
+  "lon": 24.9627947
+},
+{
+  "type": "node",
+  "id": 179916822,
+  "lat": 60.1839035,
+  "lon": 24.9624091
+},
+{
+  "type": "node",
+  "id": 179916824,
+  "lat": 60.1841296,
+  "lon": 24.9616941
 },
 {
   "type": "node",
@@ -4452,6 +6312,96 @@
   "id": 444726203,
   "lat": 52.5029160,
   "lon": 13.4115606
+},
+{
+  "type": "node",
+  "id": 659807239,
+  "lat": 48.1528574,
+  "lon": 11.6346652
+},
+{
+  "type": "node",
+  "id": 659807240,
+  "lat": 48.1527183,
+  "lon": 11.6344934
+},
+{
+  "type": "node",
+  "id": 659807241,
+  "lat": 48.1526578,
+  "lon": 11.6344912
+},
+{
+  "type": "node",
+  "id": 659807242,
+  "lat": 48.1525942,
+  "lon": 11.6345205
+},
+{
+  "type": "node",
+  "id": 659807243,
+  "lat": 48.1525564,
+  "lon": 11.6345883
+},
+{
+  "type": "node",
+  "id": 659807244,
+  "lat": 48.1525353,
+  "lon": 11.6346561
+},
+{
+  "type": "node",
+  "id": 659807245,
+  "lat": 48.1525414,
+  "lon": 11.6347375
+},
+{
+  "type": "node",
+  "id": 659807246,
+  "lat": 48.1525640,
+  "lon": 11.6347827
+},
+{
+  "type": "node",
+  "id": 659807247,
+  "lat": 48.1525988,
+  "lon": 11.6348392
+},
+{
+  "type": "node",
+  "id": 659807248,
+  "lat": 48.1526427,
+  "lon": 11.6348709
+},
+{
+  "type": "node",
+  "id": 659807249,
+  "lat": 48.1526911,
+  "lon": 11.6348731
+},
+{
+  "type": "node",
+  "id": 659807250,
+  "lat": 48.1527424,
+  "lon": 11.6348505
+},
+{
+  "type": "node",
+  "id": 659807251,
+  "lat": 48.1527712,
+  "lon": 11.6348053
+},
+{
+  "type": "node",
+  "id": 659807252,
+  "lat": 48.1527969,
+  "lon": 11.6347398
+},
+{
+  "type": "node",
+  "id": 659807254,
+  "lat": 48.1527984,
+  "lon": 11.6346765
 },
 {
   "type": "node",
@@ -4593,6 +6543,30 @@
 },
 {
   "type": "node",
+  "id": 844957915,
+  "lat": 48.1171982,
+  "lon": 11.5669508
+},
+{
+  "type": "node",
+  "id": 844957918,
+  "lat": 48.1173360,
+  "lon": 11.5659869
+},
+{
+  "type": "node",
+  "id": 844957920,
+  "lat": 48.1169997,
+  "lon": 11.5668871
+},
+{
+  "type": "node",
+  "id": 844957923,
+  "lat": 48.1171375,
+  "lon": 11.5659233
+},
+{
+  "type": "node",
   "id": 966144996,
   "lat": 52.1571160,
   "lon": 12.5932786
@@ -4635,39 +6609,45 @@
 },
 {
   "type": "node",
+  "id": 981287293,
+  "lat": 48.1527665,
+  "lon": 11.6345529
+},
+{
+  "type": "node",
   "id": 1048260583,
-  "lat": 47.0745213,
-  "lon": 15.4437009
+  "lat": 47.0745099,
+  "lon": 15.4437068
 },
 {
   "type": "node",
   "id": 1048260587,
-  "lat": 47.0744915,
-  "lon": 15.4435600
+  "lat": 47.0744802,
+  "lon": 15.4435660
 },
 {
   "type": "node",
   "id": 1048260590,
-  "lat": 47.0746367,
-  "lon": 15.4436483
+  "lat": 47.0746253,
+  "lon": 15.4436542
 },
 {
   "type": "node",
   "id": 1048260594,
-  "lat": 47.0746504,
-  "lon": 15.4437133
+  "lat": 47.0746390,
+  "lon": 15.4437190
 },
 {
   "type": "node",
   "id": 1048260603,
-  "lat": 47.0748491,
-  "lon": 15.4436227
+  "lat": 47.0747142,
+  "lon": 15.4436122
 },
 {
   "type": "node",
   "id": 1048260608,
-  "lat": 47.0748056,
-  "lon": 15.4434169
+  "lat": 47.0747920,
+  "lon": 15.4434239
 },
 {
   "type": "node",
@@ -4760,6 +6740,24 @@
 },
 {
   "type": "node",
+  "id": 1105500333,
+  "lat": 48.1613493,
+  "lon": 11.5500794
+},
+{
+  "type": "node",
+  "id": 1105500336,
+  "lat": 48.1613823,
+  "lon": 11.5489612
+},
+{
+  "type": "node",
+  "id": 1105500404,
+  "lat": 48.1609971,
+  "lon": 11.5494322
+},
+{
+  "type": "node",
   "id": 1227885730,
   "lat": 47.0706352,
   "lon": 15.4261847
@@ -4829,6 +6827,12 @@
 },
 {
   "type": "node",
+  "id": 1334714134,
+  "lat": 60.1842738,
+  "lon": 24.9618900
+},
+{
+  "type": "node",
   "id": 1370430019,
   "lat": 46.8347079,
   "lon": 15.4756903
@@ -4850,6 +6854,30 @@
   "id": 1370430318,
   "lat": 46.8346723,
   "lon": 15.4754656
+},
+{
+  "type": "node",
+  "id": 1388232462,
+  "lat": 48.1786314,
+  "lon": 11.5753211
+},
+{
+  "type": "node",
+  "id": 1388232463,
+  "lat": 48.1786260,
+  "lon": 11.5755489
+},
+{
+  "type": "node",
+  "id": 1388232482,
+  "lat": 48.1790296,
+  "lon": 11.5753509
+},
+{
+  "type": "node",
+  "id": 1388232483,
+  "lat": 48.1790212,
+  "lon": 11.5755863
 },
 {
   "type": "node",
@@ -5419,8 +7447,8 @@
 {
   "type": "node",
   "id": 1992891212,
-  "lat": 47.0746378,
-  "lon": 15.4434934,
+  "lat": 47.0746244,
+  "lon": 15.4435003,
   "tags": {
     "entrance": "main",
     "wheelchair": "yes"
@@ -5452,9 +7480,57 @@
 },
 {
   "type": "node",
+  "id": 2023933196,
+  "lat": 52.4811978,
+  "lon": 13.4027698
+},
+{
+  "type": "node",
+  "id": 2023933197,
+  "lat": 52.4812592,
+  "lon": 13.4021093
+},
+{
+  "type": "node",
+  "id": 2023933199,
+  "lat": 52.4814526,
+  "lon": 13.4029245
+},
+{
+  "type": "node",
+  "id": 2023933200,
+  "lat": 52.4815884,
+  "lon": 13.4022153
+},
+{
+  "type": "node",
   "id": 2106337095,
   "lat": 52.1553608,
   "lon": 12.5917400
+},
+{
+  "type": "node",
+  "id": 2269815049,
+  "lat": 48.0767802,
+  "lon": 11.5032537
+},
+{
+  "type": "node",
+  "id": 2269815050,
+  "lat": 48.0767813,
+  "lon": 11.5037560
+},
+{
+  "type": "node",
+  "id": 2269815051,
+  "lat": 48.0771063,
+  "lon": 11.5032667
+},
+{
+  "type": "node",
+  "id": 2269815052,
+  "lat": 48.0771064,
+  "lon": 11.5037481
 },
 {
   "type": "node",
@@ -5783,6 +7859,12 @@
 },
 {
   "type": "node",
+  "id": 2868911074,
+  "lat": 48.0769469,
+  "lon": 11.5032604
+},
+{
+  "type": "node",
   "id": 2910477533,
   "lat": 52.4623022,
   "lon": 13.4580289
@@ -5850,26 +7932,26 @@
 {
   "type": "node",
   "id": 2956371258,
-  "lat": 47.0701174,
-  "lon": 15.4488052
+  "lat": 47.0701081,
+  "lon": 15.4487987
 },
 {
   "type": "node",
   "id": 2956371259,
-  "lat": 47.0701083,
-  "lon": 15.4488427
+  "lat": 47.0700990,
+  "lon": 15.4488362
 },
 {
   "type": "node",
   "id": 2956371260,
-  "lat": 47.0700827,
-  "lon": 15.4488186
+  "lat": 47.0700734,
+  "lon": 15.4488121
 },
 {
   "type": "node",
   "id": 2956371261,
-  "lat": 47.0700918,
-  "lon": 15.4487864
+  "lat": 47.0700825,
+  "lon": 15.4487799
 },
 {
   "type": "node",
@@ -6047,6 +8129,15 @@
   "id": 3188552718,
   "lat": 46.8336411,
   "lon": 15.4752866
+},
+{
+  "type": "node",
+  "id": 3302914905,
+  "lat": 48.1173198,
+  "lon": 11.5660943,
+  "tags": {
+    "entrance": "main"
+  }
 },
 {
   "type": "node",
@@ -6950,6 +9041,12 @@
 },
 {
   "type": "node",
+  "id": 3859854867,
+  "lat": 48.1617345,
+  "lon": 11.5496084
+},
+{
+  "type": "node",
   "id": 3871230414,
   "lat": 52.2567333,
   "lon": 0.2290271
@@ -7028,6 +9125,12 @@
 },
 {
   "type": "node",
+  "id": 3877224449,
+  "lat": 48.1612891,
+  "lon": 11.5499687
+},
+{
+  "type": "node",
   "id": 3953627184,
   "lat": 61.5048421,
   "lon": 23.7823681
@@ -7055,6 +9158,130 @@
   "id": 3953627188,
   "lat": 61.5048523,
   "lon": 23.7836609
+},
+{
+  "type": "node",
+  "id": 4011524096,
+  "lat": 48.8715740,
+  "lon": 2.3849463,
+  "tags": {
+    "addr:housenumber": "27",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 4013551031,
+  "lat": 51.3435084,
+  "lon": 9.8574117,
+  "tags": {
+    "access": "customers",
+    "entrance": "yes",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 4013551033,
+  "lat": 51.3435605,
+  "lon": 9.8575780,
+  "tags": {
+    "access": "permissive",
+    "entrance": "yes",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 4013551034,
+  "lat": 51.3435795,
+  "lon": 9.8573885,
+  "tags": {
+    "access": "private",
+    "entrance": "yes",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 4042558979,
+  "lat": 49.4552075,
+  "lon": 11.0330290
+},
+{
+  "type": "node",
+  "id": 4042558980,
+  "lat": 49.4551688,
+  "lon": 11.0333919
+},
+{
+  "type": "node",
+  "id": 4042558981,
+  "lat": 49.4549734,
+  "lon": 11.0337223
+},
+{
+  "type": "node",
+  "id": 4042558982,
+  "lat": 49.4547568,
+  "lon": 11.0334813
+},
+{
+  "type": "node",
+  "id": 4042558983,
+  "lat": 49.4550438,
+  "lon": 11.0328015
+},
+{
+  "type": "node",
+  "id": 4042558984,
+  "lat": 49.4552029,
+  "lon": 11.0329358
+},
+{
+  "type": "node",
+  "id": 4255447514,
+  "lat": 47.0747173,
+  "lon": 15.4436268
+},
+{
+  "type": "node",
+  "id": 4255447515,
+  "lat": 47.0747279,
+  "lon": 15.4436773
+},
+{
+  "type": "node",
+  "id": 4255447528,
+  "lat": 47.0748217,
+  "lon": 15.4435643
+},
+{
+  "type": "way",
+  "id": 17373159,
+  "nodes": [
+    179916815,
+    179916817,
+    179916819,
+    179916820,
+    179916822,
+    179916824,
+    1334714134,
+    179916815
+  ],
+  "tags": {
+    "addr:city": "Helsinki",
+    "addr:housenumber": "10",
+    "addr:postcode": "00500",
+    "addr:street": "Lintulahdenkatu",
+    "building:maintenance:operator": "Sol Palvelut Oy",
+    "description": "SASKin perustehtäviä on toteuttaa vapaata ja demokraattista ammattiyhdistyliikettä tukevia hankkeita kehittyvissä maissa sekä toimia jäsenjärjestöjensä välineenä kotimaan ja kansainvälisessä kehityspoliittisessa vaikuttamisessa.",
+    "guard:operator": "ISS",
+    "identity": "transition_initiative",
+    "name": "SASK - Suomen Ammattiliittojen Solidaarisuuskeskus",
+    "provides": "learning_opportunities;community;participation",
+    "topic": "learning_opportunities;community;participation"
+  }
 },
 {
   "type": "way",
@@ -7148,6 +9375,49 @@
 },
 {
   "type": "way",
+  "id": 51686326,
+  "nodes": [
+    659807239,
+    981287293,
+    659807240,
+    659807241,
+    659807242,
+    659807243,
+    659807244,
+    659807245,
+    659807246,
+    659807247,
+    659807248,
+    659807249,
+    659807250,
+    659807251,
+    659807252,
+    659807254,
+    659807239
+  ],
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "166",
+    "addr:postcode": "81927",
+    "addr:street": "Englschalkinger Straße",
+    "building": "yes",
+    "building:height": "3 m",
+    "club": "yes",
+    "contact:fax": "+49 8993 94 8981",
+    "email": "mail@oebz.de",
+    "identity": "transition_initiative",
+    "name": "Ökologisches Bildungszentrum München",
+    "phone": "+49-89-93 94 89-60",
+    "provides": "learning_opportunities",
+    "source": "survey by BenE München",
+    "topic": "learning_opportunities;environment",
+    "website": "www.oebz.de",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
   "id": 51799167,
   "nodes": [
     1692266868,
@@ -7224,6 +9494,7 @@
   "id": 70002965,
   "nodes": [
     836363666,
+    4011524096,
     836331243,
     836352929,
     836404338,
@@ -7245,6 +9516,33 @@
     "provides": "spaces;learning_opportunities;energy;community",
     "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010",
     "wall": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 70873547,
+  "nodes": [
+    844957918,
+    3302914905,
+    844957915,
+    844957920,
+    844957923,
+    844957918
+  ],
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "29",
+    "addr:postcode": "81543",
+    "addr:street": "Sachsenstraße",
+    "building": "yes",
+    "identity": "degrowth",
+    "interaction": "rebuying_reselling",
+    "name": "Halle 2",
+    "opening_hours": "Tu-Fr 15:00-18:00;Sa 09:00-13:00",
+    "operator": "Abfallwirtschaftsbetrieb München",
+    "shop": "second_hand",
+    "wheelchair": "yes"
   }
 },
 {
@@ -7292,7 +9590,10 @@
     1048260583,
     1048260590,
     1048260594,
+    4255447515,
+    4255447514,
     1048260603,
+    4255447528,
     1048260608
   ],
   "tags": {
@@ -7318,6 +9619,31 @@
 },
 {
   "type": "way",
+  "id": 95305383,
+  "nodes": [
+    3859854867,
+    1105500333,
+    3877224449,
+    1105500404,
+    1105500336,
+    3859854867
+  ],
+  "tags": {
+    "email": "mitmachen@o-pflanzt-is.de",
+    "fenced": "yes",
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "o-pflanzt-is",
+    "operator": "o’pflanzt is! e.V.",
+    "organic": "only",
+    "provides": "food+drink",
+    "website": "http://o-pflanzt-is.de"
+  }
+},
+{
+  "type": "way",
   "id": 114200341,
   "nodes": [
     1293943431,
@@ -7338,6 +9664,31 @@
     "name": "Timelab",
     "provides": "learning_opportunities;objects_of_utility;community;participation",
     "topic": "culture;learning_opportunities"
+  }
+},
+{
+  "type": "way",
+  "id": 124842508,
+  "nodes": [
+    1388232463,
+    1388232483,
+    1388232482,
+    1388232462,
+    1388232463
+  ],
+  "tags": {
+    "addr:city": "München",
+    "addr:country": "DE",
+    "addr:housenumber": "4",
+    "addr:street": "Ricarda-Huch-Straße",
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "Generationengarten",
+    "organic": "only",
+    "provides": "food+drink",
+    "url": "http://www.verein-stadtteilarbeit.de/index.php?option=com_content&view=article&id=38&Itemid=20"
   }
 },
 {
@@ -7423,10 +9774,8 @@
     "contact:phone": "+49 176 32539322",
     "contact:website": "http://freiland-potsdam.de/about",
     "identity": "commons",
-    "landuse": "residential",
     "name": "freiLand Potsdam",
     "provides": "culture;spaces",
-    "source": "Solikon 2015",
     "website": "http://www.freiland-potsdam.de",
     "wheelchair": "limited"
   }
@@ -7465,7 +9814,7 @@
     "mode_of_organisation:purpose": "not_for_private_profit",
     "mode_of_organisation:scale_of_activity": "regional",
     "mode_of_organisation:self_managed": "yes",
-    "name": "Ca la fou",
+    "name": "Ca la Fou",
     "official_name": "Colonia Ecoindustrial Postcapitalista Ca La Fou",
     "old_name": "Colonis marçal",
     "provides": "food+drink;housing;spaces;objects_of_utility;learning_opportunities;energy;community;participation",
@@ -7667,6 +10016,46 @@
     "topic": "food+drink;culture;housing;community;participation",
     "tourism": "hostel",
     "website": "http://projekthaus-potsdam.de"
+  }
+},
+{
+  "type": "way",
+  "id": 191828051,
+  "nodes": [
+    2023933197,
+    2023933196,
+    2023933199,
+    2023933200,
+    2023933197
+  ],
+  "tags": {
+    "garden:type": "community",
+    "identity": "commons",
+    "leisure": "garden",
+    "name": "Stadtacker"
+  }
+},
+{
+  "type": "way",
+  "id": 217668781,
+  "nodes": [
+    2269815052,
+    2269815050,
+    2269815049,
+    2868911074,
+    2269815051,
+    2269815052
+  ],
+  "tags": {
+    "garden:type": "community",
+    "identity": "subsistence_economy",
+    "interaction": "cousing",
+    "leisure": "garden",
+    "name": "Sonnengarten Solln",
+    "organic": "only",
+    "provides": "food+drink",
+    "topic": "food+drink",
+    "website": "http://www.sonnengarten-solln.de/"
   }
 },
 {
@@ -8153,7 +10542,7 @@
     "operator": "Gemeinschafsgarten Allmende-Kontor e.V.",
     "provides": "learning_opportunities;land;spirituality;community;culture;spaces;participation",
     "start_date": "04/2011",
-    "website": "http://www.allmende-kontor.de/ ; http://www.ruebezahl-tempelhof.de/",
+    "website": "http://www.allmende-kontor.de/",
     "wheelchair": "limited"
   }
 },
@@ -8242,13 +10631,17 @@
   "id": 341649964,
   "nodes": [
     3487780936,
+    4013551034,
+    4013551031,
     3487780937,
     3487780938,
+    4013551033,
     3487780939,
     3487780936
   ],
   "tags": {
     "addr:city": "Witzenhausen",
+    "addr:country": "DE",
     "addr:housenumber": "20",
     "addr:postcode": "37213",
     "addr:street": "Brückenstraße",
@@ -8331,6 +10724,7 @@
   "tags": {
     "access": "permissive",
     "addr:city": "Halle (Saale)",
+    "addr:country": "DE",
     "addr:housenumber": "50",
     "addr:postcode": "06118",
     "addr:street": "Gottfried-Keller-Straße",
@@ -8600,6 +10994,49 @@
     "landuse": "residential",
     "name": "Asunto-osakeyhtiö Tampereen Annikki",
     "provides": "housing;culture;community"
+  }
+},
+{
+  "type": "way",
+  "id": 401849214,
+  "nodes": [
+    4042558979,
+    4042558980,
+    4042558981,
+    4042558982,
+    4042558983,
+    4042558984,
+    4042558979
+  ],
+  "tags": {
+    "access": "public",
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "44",
+    "addr:postcode": "90431",
+    "addr:street": "Wandererstraße",
+    "contact:email": "stadtgarten@bluepingu.de",
+    "contact:facebook": "https://www.facebook.com/Stadtgarten.Nuernberg/?fref=ts",
+    "contact:website": "http://www.stadtgarten-nuernberg.de/",
+    "description": "Gemeinschaftsgarten",
+    "diet:raw": "yes",
+    "diet:vegan": "yes",
+    "diet:vegetarian": "yes",
+    "fee": "no",
+    "identity": "transition_initiative;permaculture;commons",
+    "interaction": "bartering;sharing;lending;gifting;cousing;diy_and_dit;buying_and_selling",
+    "internet_access": "no",
+    "leisure": "garden",
+    "name": "Stadtgarten",
+    "opening_hours": "Tu,Fr 16:00-20:00; Sa 12:00-18:00",
+    "operator": "Bluepingu eV",
+    "organic": "only",
+    "provides": "water;culture;spaces;objects_of_utility;learning_opportunities;community;participation;spirituality",
+    "regional": "yes",
+    "start_date": "2012",
+    "surface": "asphalt",
+    "website": "http://www.stadtgarten-nuernberg.de/",
+    "wheelchair": "limited"
   }
 },
 {
