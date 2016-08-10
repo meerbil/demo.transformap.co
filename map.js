@@ -278,9 +278,24 @@ function initMap(defaultlayer,base_maps,overlay_maps,lat,lon,zoom) {
       noWrap: true
   });
 
+  terrain = new L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', {
+      attribution: 'Map tiles by <a href="http://stamen.com/">Stamen Design</a>, '+
+        'under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. '+
+        'Data by <a href="https://openstreetmap.org">OpenStreetMap</a> contributors, under <a href="https://www.openstreetmap.org/copyright">ODbL</a>.'
+  });
+  terrain_bg = new L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-background/{z}/{x}/{y}.png', {
+      attribution: 'Map tiles by <a href="http://stamen.com/">Stamen Design</a>, '+
+        'under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. '+
+        'Data by <a href="https://openstreetmap.org">OpenStreetMap</a> contributors, under <a href="https://www.openstreetmap.org/copyright">ODbL</a>.'
+  });
+  hot = new L.tileLayer('http://tile-{s}.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+      attribution: 'Tiles courtesy of <a href="http://hot.openstreetmap.org/">Humanitarian OpenStreetMap Team</a>. '+
+        'Data by <a href="https://openstreetmap.org">OpenStreetMap</a> contributors, under <a href="https://www.openstreetmap.org/copyright">ODbL</a>.'
+  });
+
   /*if(!defaultlayer)
     defaultlayer = (window.parent.document.location.protocol == "https:") ? osm : MapQuestOpen_OSM;*/
-  defaultlayer = osm;
+  defaultlayer = terrain_bg;
 
   if(!overlay_maps)
     overlay_maps = default_overlay;
@@ -301,7 +316,11 @@ function initMap(defaultlayer,base_maps,overlay_maps,lat,lon,zoom) {
 
     base_maps = {
 //      'MapQuestOpen': MapQuestOpen_OSM,
-      'OpenSteetMap - Mapnik': osm
+      'Stamen - Terrain Background': terrain_bg,
+      'Stamen - Terrain': terrain,
+      'Humanitarian OpenSteetMap ': hot,
+      'OpenSteetMap - Mapnik': osm,
+
     };
   }
 
